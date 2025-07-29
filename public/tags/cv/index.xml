@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cv on Polina Shopina</title>
+    <link>http://localhost:1313/tags/cv/</link>
+    <description>Recent content in Cv on Polina Shopina</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2025 Polina Shopina</copyright>
+    <lastBuildDate>Tue, 15 Jul 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/cv/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Autonomous Seed Interrogator</title>
+      <link>http://localhost:1313/projects/seed/</link>
+      <pubDate>Tue, 15 Jul 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/projects/seed/</guid>
+      <description>Built an autonomous seed-sorting device for a Vancouver-based start-up Insporos.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/projects/seed/featured.jpeg" />
+    </item>
+    
+    <item>
+      <title>Treasure-Collecting Robot Competition</title>
+      <link>http://localhost:1313/projects/robotsummer/</link>
+      <pubDate>Tue, 15 Jul 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/projects/robotsummer/</guid>
+      <description>Built an autonomous differential‑drive robot built in a six‑week UBC ENPH 253 course. It uses IR, ultrasonic, and magnetic sensors with PID control to navigate an obstacle course and collect objects with a four‑DOF claw.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/projects/robotsummer/featured.jpg" />
+    </item>
+    
+    <item>
+      <title>Virtual Autonomous Driving Robot Competition</title>
+      <link>http://localhost:1313/projects/gazebo/</link>
+      <pubDate>Tue, 15 Jul 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/projects/gazebo/</guid>
+      <description>Trained an agent in Gazebo to autonomously navigate a 3D obstacle course (imitation learning) and correctly read random license plates (CNN) while avoiding collisions.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/projects/gazebo/featured.png" />
+    </item>
+    
+  </channel>
+</rss>

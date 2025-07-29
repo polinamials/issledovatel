@@ -1,0 +1,13 @@
+{{/* Show up to 100 recent items from the “projects” section instead of “posts” */}}
+{{ $recentProjects := 100 }}
+
+<!-- change to this if I want to change to list view -->
+<!-- <section class="space-y-10 w-full"> -->
+
+  <section class="w-full grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+  {{ range first $recentProjects (
+        .Paginate (where .Site.RegularPages "Section" "projects")
+      ).Pages }}
+    {{ partial "article-link/card.html" . }}
+  {{ end }}
+</section>

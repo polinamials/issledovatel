@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on Polina Shopina</title>
+    <link>http://localhost:1313/projects/</link>
+    <description>Recent content in Projects on Polina Shopina</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2025 Polina Shopina</copyright>
+    <lastBuildDate>Wed, 16 Jul 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/projects/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Hand-Tracking Theremin Demo</title>
+      <link>http://localhost:1313/projects/theremin_demo/</link>
+      <pubDate>Fri, 25 Jul 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/projects/theremin_demo/</guid>
+      <description>A theremin you can play in the browser by tracking your hands through the webcam.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/projects/theremin_demo/featured.png" />
+    </item>
+    
+    <item>
+      <title>Autonomous Seed Interrogator</title>
+      <link>http://localhost:1313/projects/seed/</link>
+      <pubDate>Tue, 15 Jul 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/projects/seed/</guid>
+      <description>Built an autonomous seed-sorting device for a Vancouver-based start-up Insporos.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/projects/seed/featured.jpeg" />
+    </item>
+    
+    <item>
+      <title>Ballistic Interceptor</title>
+      <link>http://localhost:1313/projects/interceptor/</link>
+      <pubDate>Tue, 15 Jul 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/projects/interceptor/</guid>
+      <description>Built an automated ballistic interceptor that used a high-speed stereo vision system and OpenCV to predict 3D ball trajectories for interception with a projectile from a stepper‑driven BB launcher.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/projects/interceptor/featured.jpg" />
+    </item>
+    
+    <item>
+      <title>Orbital Research Internship</title>
+      <link>http://localhost:1313/projects/orbital/</link>
+      <pubDate>Tue, 15 Jul 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/projects/orbital/</guid>
+      <description>Designed RF up/down converter components in SolidWorks, including machine‑shop drawings with GD&amp;amp;T. Fabricated customer‑specific mechanical modifications on time. Built and automated a vibration‑testing jig.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/projects/orbital/featured.jpg" />
+    </item>
+    
+    <item>
+      <title>Treasure-Collecting Robot Competition</title>
+      <link>http://localhost:1313/projects/robotsummer/</link>
+      <pubDate>Tue, 15 Jul 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/projects/robotsummer/</guid>
+      <description>Built an autonomous differential‑drive robot built in a six‑week UBC ENPH 253 course. It uses IR, ultrasonic, and magnetic sensors with PID control to navigate an obstacle course and collect objects with a four‑DOF claw.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/projects/robotsummer/featured.jpg" />
+    </item>
+    
+    <item>
+      <title>TRIUMF Internship</title>
+      <link>http://localhost:1313/projects/triumf/</link>
+      <pubDate>Tue, 15 Jul 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/projects/triumf/</guid>
+      <description>Improved an automated Mu‑metal‑shielded gradiometer and wrote Python scripts to control multimeters and oscilloscopes for fluxgate measurements.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/projects/triumf/featured.jpg" />
+    </item>
+    
+    <item>
+      <title>UBC SAE AeroDesign Team</title>
+      <link>http://localhost:1313/projects/aerodesign/</link>
+      <pubDate>Tue, 15 Jul 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/projects/aerodesign/</guid>
+      <description>Was the Advanced Class fuselage subteam lead for UBC AeroDesign; designed fuselage parts in SolidWorks and wrote a Python script to perform aerodynamic constraint analysis and optimize design parameters to maximize SAE competition score.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/projects/aerodesign/featured.jpg" />
+    </item>
+    
+    <item>
+      <title>Virtual Autonomous Driving Robot Competition</title>
+      <link>http://localhost:1313/projects/gazebo/</link>
+      <pubDate>Tue, 15 Jul 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/projects/gazebo/</guid>
+      <description>Trained an agent in Gazebo to autonomously navigate a 3D obstacle course (imitation learning) and correctly read random license plates (CNN) while avoiding collisions.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/projects/gazebo/featured.png" />
+    </item>
+    
+  </channel>
+</rss>

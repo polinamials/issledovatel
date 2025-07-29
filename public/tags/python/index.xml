@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python on Polina Shopina</title>
+    <link>http://localhost:1313/tags/python/</link>
+    <description>Recent content in Python on Polina Shopina</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2025 Polina Shopina</copyright>
+    <lastBuildDate>Tue, 15 Jul 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>UBC SAE AeroDesign Team</title>
+      <link>http://localhost:1313/projects/aerodesign/</link>
+      <pubDate>Tue, 15 Jul 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/projects/aerodesign/</guid>
+      <description>Was the Advanced Class fuselage subteam lead for UBC AeroDesign; designed fuselage parts in SolidWorks and wrote a Python script to perform aerodynamic constraint analysis and optimize design parameters to maximize SAE competition score.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/projects/aerodesign/featured.jpg" />
+    </item>
+    
+    <item>
+      <title>Virtual Autonomous Driving Robot Competition</title>
+      <link>http://localhost:1313/projects/gazebo/</link>
+      <pubDate>Tue, 15 Jul 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/projects/gazebo/</guid>
+      <description>Trained an agent in Gazebo to autonomously navigate a 3D obstacle course (imitation learning) and correctly read random license plates (CNN) while avoiding collisions.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/projects/gazebo/featured.png" />
+    </item>
+    
+  </channel>
+</rss>

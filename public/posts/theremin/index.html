@@ -1,0 +1,1541 @@
+<!doctype html>
+<html
+  lang="en"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="dark"
+  data-auto-appearance="true"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  
+    <meta http-equiv="content-language" content="en">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color">
+
+  
+  <title>How to Make a Hand-Tracking Theremin Browser Game &middot; Polina Shopina</title>
+    <meta name="title" content="How to Make a Hand-Tracking Theremin Browser Game &middot; Polina Shopina">
+
+  
+  <meta name="description" content="Build a musical instrument you can play in your browser with JavaScript.">
+  
+  
+  
+  <link rel="canonical" href="http://localhost:1313/posts/theremin/">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.4588da4c78f260a6766fb45d83eab577cae3daf5eb6db6607b132781906285f7b99603ffdc3266667c5ee1bfdeb0941bbfb37ba29533b96c9022f56ede40d295.css"
+    integrity="sha512-RYjaTHjyYKZ2b7Rdg&#43;q1d8rj2vXrbbZgexMngZBihfe5lgP/3DJmZnxe4b/esJQbv7N7opUzuWyQIvVu3kDSlQ==">
+
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.516a16745bea5a9bd011138d254cc0fd3973cd55ce6e15f3dec763e7c7c2c7448f8fe7b54cca811cb821b0c7e12cd161caace1dd794ac3d34d40937cbcc9ee12.js"
+    integrity="sha512-UWoWdFvqWpvQERONJUzA/TlzzVXObhXz3sdj58fCx0SPj&#43;e1TMqBHLghsMfhLNFhyqzh3XlKw9NNQJN8vMnuEg=="></script>
+  
+    
+    
+    
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.a187118b41a60744310065c567365de85730c8495301d0ebae41810cc6f7a47432b1de7d4f3b11338959f1ac50c266be6b4b73acf6bf770016eb59b602cc1aa0.js"
+      integrity="sha512-oYcRi0GmB0QxAGXFZzZd6FcwyElTAdDrrkGBDMb3pHQysd59TzsRM4lZ8axQwma&#43;a0tzrPa/dwAW61m2AswaoA=="
+      data-copy="Copy"
+      data-copied="Copied"></script>
+  
+  
+    
+    <script src="/lib/zoom/zoom.min.umd.a527109b68c082a70f3697716dd72a9d5aa8b545cf800cecbbc7399f2ca6f6e0ce3e431f2062b48bbfa47c9ea42822714060bef309be073f49b9c0e30d318d7b.js" integrity="sha512-pScQm2jAgqcPNpdxbdcqnVqotUXPgAzsu8c5nyym9uDOPkMfIGK0i7&#43;kfJ6kKCJxQGC&#43;8wm&#43;Bz9JucDjDTGNew=="></script>
+  
+
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+  <meta property="og:url" content="http://localhost:1313/posts/theremin/">
+  <meta property="og:site_name" content="Polina Shopina">
+  <meta property="og:title" content="How to Make a Hand-Tracking Theremin Browser Game">
+  <meta property="og:description" content="Build a musical instrument you can play in your browser with JavaScript.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-07-25T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-07-25T00:00:00+00:00">
+    <meta property="og:image" content="http://localhost:1313/posts/theremin/featured.png">
+
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://localhost:1313/posts/theremin/featured.png">
+  <meta name="twitter:title" content="How to Make a Hand-Tracking Theremin Browser Game">
+  <meta name="twitter:description" content="Build a musical instrument you can play in your browser with JavaScript.">
+<meta name="twitter:image" content="http://localhost:1313/posts/theremin/featured.png">
+    <meta property="og:image" content="http://localhost:1313/posts/theremin/featured.png">
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Posts",
+    "name": "How to Make a Hand-Tracking Theremin Browser Game",
+    "headline": "How to Make a Hand-Tracking Theremin Browser Game",
+    
+    "abstract": "Build a musical instrument you can play in your browser with JavaScript.",
+    "inLanguage": "en",
+    "url" : "http:\/\/localhost:1313\/posts\/theremin\/",
+    "author" : {
+      "@type": "Person",
+      "name": "Polina Shopina"
+    },
+    "copyrightYear": "2025",
+    "dateCreated": "2025-07-25T00:00:00\u002b00:00",
+    "datePublished": "2025-07-25T00:00:00\u002b00:00",
+    
+    "dateModified": "2025-07-25T00:00:00\u002b00:00",
+    
+    
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "2256"
+  }]
+  </script>
+
+
+
+  
+  
+    <meta name="author" content="Polina Shopina">
+  
+  
+    
+      
+        
+      
+    
+      
+        
+          <link href="https://github.com/username" rel="me">
+        
+      
+    
+  
+
+  
+  
+
+<script src="/lib/jquery/jquery.slim.min.b0dca576e87d7eaa5850ae4e61759c065786cdb6489d68fcc82240539eebd5da522bdb4fda085ffd245808c8fe2acb2516408eb774ef26b5f6015fc6737c0ea8.js" integrity="sha512-sNylduh9fqpYUK5OYXWcBleGzbZInWj8yCJAU57r1dpSK9tP2ghf/SRYCMj&#43;KsslFkCOt3TvJrX2AV/Gc3wOqA=="></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+</head>
+<body
+    class="flex flex-col h-screen px-6 m-auto text-lg leading-7 max-w-7xl bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral sm:px-14 md:px-24 lg:px-32 scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600">
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content"
+        ><span class="font-bold text-primary-600 ltr:pr-2 rtl:pl-2 dark:text-primary-400">&darr;</span>Skip to main content</a
+      >
+    </div>
+    
+    
+      <div class="min-h-[148px]"></div>
+<div class="fixed inset-x-0 pl-[24px] pr-[24px] z-100">
+  <div
+    id="menu-blur"
+    class="absolute opacity-0 inset-x-0 top-0 h-full single_hero_background nozoom backdrop-blur-2xl shadow-2xl"></div>
+  <div class="relative max-w-[64rem] ml-auto mr-auto">
+    
+
+
+
+
+
+
+
+
+
+
+
+<div
+  class="main-menu flex items-center justify-between px-4 py-6 sm:px-6 md:justify-start gap-x-3 pt-[2px] pr-0 pb-[3px] pl-0">
+  
+  
+
+  <div class="flex flex-1 items-center justify-between">
+    <nav class="flex space-x-3">
+      
+        <a href="/" class="text-base font-medium text-gray-500 hover:text-gray-900">
+          Polina Shopina
+        </a>
+      
+    </nav>
+    
+  <nav class="hidden md:flex items-center gap-x-5 md:ml-12 h-12">
+    
+      
+        
+  <a
+  href="/about/"
+  
+  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+  
+  <p class="text-base font-medium" title="About Me">
+    About
+  </p>
+</a>
+
+
+
+      
+        
+  <a
+  href="/projects/"
+  
+  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+  
+  <p class="text-base font-medium" title="Projects">
+    Projects
+  </p>
+</a>
+
+
+
+      
+        
+  <a
+  href="/resume/"
+  
+  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+  
+  <p class="text-base font-medium" title="About Me">
+    Resume
+  </p>
+</a>
+
+
+
+      
+        
+  <a
+  href="/posts/"
+  
+  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+  
+  <p class="text-base font-medium" title="Posts">
+    Blog
+  </p>
+</a>
+
+
+
+      
+    
+
+    
+
+
+    
+      <button
+        id="search-button"
+        aria-label="Search"
+        class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+        title="Search (/)">
+        
+
+  <span class="relative block icon">
+    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+
+  </span>
+
+
+      </button>
+    
+
+    
+      <div class=" flex items-center">
+        <button
+          id="appearance-switcher"
+          aria-label="Dark mode switcher"
+          type="button"
+          class="text-base hover:text-primary-600 dark:hover:text-primary-400">
+          <div class="flex items-center justify-center dark:hidden">
+            
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+
+  </span>
+
+
+          </div>
+          <div class="items-center justify-center hidden dark:flex">
+            
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+
+  </span>
+
+
+          </div>
+        </button>
+      </div>
+    
+  </nav>
+
+    
+  <div class="flex md:hidden items-center gap-x-5 md:ml-12 h-12">
+    <span></span>
+
+    
+
+    
+      <button
+        id="search-button-mobile"
+        aria-label="Search"
+        class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+        title="Search (/)">
+        
+
+  <span class="relative block icon">
+    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+
+  </span>
+
+
+      </button>
+    
+
+    
+      <button
+        id="appearance-switcher-mobile"
+        aria-label="Dark mode switcher"
+        type="button"
+        class="text-base hover:text-primary-600 dark:hover:text-primary-400 ltr:mr-1 rtl:ml-1">
+        <div class="flex items-center justify-center dark:hidden">
+          
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+
+  </span>
+
+
+        </div>
+        <div class="items-center justify-center hidden dark:flex">
+          
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+
+  </span>
+
+
+        </div>
+      </button>
+    
+  </div>
+
+  </div>
+  
+  <div class="-my-2 md:hidden">
+    <div id="menu-button" class="block">
+      
+        <div class="cursor-pointer hover:text-primary-600 dark:hover:text-primary-400">
+          
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+
+  </span>
+
+
+        </div>
+        <div
+          id="menu-wrapper"
+          class="fixed inset-0 z-30 invisible w-screen h-screen m-0 overflow-auto transition-opacity opacity-0 cursor-default bg-neutral-100/50 backdrop-blur-sm dark:bg-neutral-900/50 pt-[5px]">
+          <ul
+            class="flex space-y-2 mt-3 flex-col items-end w-full px-6 py-6 mx-auto overflow-visible list-none ltr:text-right rtl:text-left max-w-7xl">
+            <li id="menu-close-button">
+              <span
+                class="cursor-pointer inline-block align-text-bottom hover:text-primary-600 dark:hover:text-primary-400">
+                
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+
+  </span>
+
+
+              </span>
+            </li>
+
+            
+              
+  <li class="mt-1">
+  <a
+    href="/about/"
+    
+    class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-bg font-bg" title="About Me">
+      About
+    </p>
+  </a>
+</li>
+
+
+
+            
+              
+  <li class="mt-1">
+  <a
+    href="/projects/"
+    
+    class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-bg font-bg" title="Projects">
+      Projects
+    </p>
+  </a>
+</li>
+
+
+
+            
+              
+  <li class="mt-1">
+  <a
+    href="/resume/"
+    
+    class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-bg font-bg" title="About Me">
+      Resume
+    </p>
+  </a>
+</li>
+
+
+
+            
+              
+  <li class="mt-1">
+  <a
+    href="/posts/"
+    
+    class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-bg font-bg" title="Posts">
+      Blog
+    </p>
+  </a>
+</li>
+
+
+
+            
+
+          </ul>
+          
+        </div>
+      
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+
+<script
+  type="text/javascript"
+  src="/js/background-blur.min.78ad5090e7c0c2533bac9dd23bdb1f723f834e5c3626627bd31017cc139ce0651b529877862129cee49e380ab2fdcd8baef28ae3e086bc54957fdaa7758775b2.js"
+  integrity="sha512-eK1QkOfAwlM7rJ3SO9sfcj&#43;DTlw2JmJ70xAXzBOc4GUbUph3hiEpzuSeOAqy/c2LrvKK4&#43;CGvFSVf9qndYd1sg=="
+  data-target-id="menu-blur"></script>
+
+    
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  
+
+
+  <article>
+    
+
+
+    <header id="single_header" class="mt-5 max-w-prose">
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        How to Make a Hand-Tracking Theremin Browser Game
+      </h1>
+      <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+  
+
+  
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2025-07-25T00:00:00&#43;00:00">25 July 2025</time>
+    
+
+    
+    
+  </div>
+
+  
+
+  
+  
+
+  
+  
+
+
+
+      </div>
+
+      
+      
+      
+      
+      
+
+      
+
+      
+
+        
+
+        
+
+        
+
+      
+
+    </header>
+
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+      
+        <div class="order-first lg:ml-auto px-0 lg:order-last ltr:lg:pl-8 rtl:lg:pr-8">
+          <div
+            class="toc ltr:pl-5 rtl:pr-5 print:hidden lg:sticky lg:top-[140px]
+            
+            ">
+            
+              <details
+  open
+  id="TOCView"
+  class="toc-right mt-0 overflow-y-auto overscroll-contain scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600 rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 hidden lg:block">
+  <summary
+    class="block py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    Table of Contents
+  </summary>
+  <div
+    class="min-w-[220px] py-2 border-dotted ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#start-local-http-server">Start Local HTTP Server</a></li>
+    <li><a href="#set-up-hand-landmarker">Set Up Hand Landmarker</a></li>
+    <li><a href="#add-threejs-3d-canvas">Add Three.js 3D Canvas</a></li>
+    <li><a href="#render-hand-landmarks-in-3d">Render Hand Landmarks in 3D</a></li>
+    <li><a href="#import-theremin-3d-model">Import Theremin 3D Model</a></li>
+    <li><a href="#calculated-distances-to-antennas">Calculated Distances To Antennas</a></li>
+    <li><a href="#add-sound-with-tonejs">Add Sound With Tone.js</a></li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+<details class="toc-inside mt-0 overflow-hidden rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 lg:hidden">
+  <summary
+    class="py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    Table of Contents
+  </summary>
+  <div
+    class="py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#start-local-http-server">Start Local HTTP Server</a></li>
+    <li><a href="#set-up-hand-landmarker">Set Up Hand Landmarker</a></li>
+    <li><a href="#add-threejs-3d-canvas">Add Three.js 3D Canvas</a></li>
+    <li><a href="#render-hand-landmarks-in-3d">Render Hand Landmarks in 3D</a></li>
+    <li><a href="#import-theremin-3d-model">Import Theremin 3D Model</a></li>
+    <li><a href="#calculated-distances-to-antennas">Calculated Distances To Antennas</a></li>
+    <li><a href="#add-sound-with-tonejs">Add Sound With Tone.js</a></li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+
+
+            
+            
+          </div>
+        </div>
+      
+
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+
+
+
+        <div class="article-content max-w-prose mb-20">
+          <p><strong>This article is a work in progress!</strong></p>
+
+<h2 class="relative group">Introduction 
+    <div id="introduction" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#introduction" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+<p>I recently came across the <a
+  href="https://ai.google.dev/edge/mediapipe/solutions/vision/hand_landmarker#configurations_options"
+    target="_blank"
+  >MediaPipe Hand Landmarker</a> computer vision model by Google AI Edge. This is a hand-detection model which detects 21 key points of a hand in an image, and it has a fast enough inference time on a  GPU to be used for real-time tracking.</p>
+<p>
+
+
+
+
+
+
+<figure>
+      <img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Hand Example"
+    srcset="
+      /posts/theremin/hand_landmark_hu_d68cf0a261ee0914.png  330w,
+      /posts/theremin/hand_landmark_hu_e80f217c4a7c4502.png  660w,
+      /posts/theremin/hand_landmark_hu_5108e97d0f15bd09.png 1280w
+    "
+    data-zoom-src="/posts/theremin/hand_landmark.png"
+    src="/posts/theremin/hand_landmark.png">
+
+  
+</figure>
+</p>
+<p><em>Example of a detected hand from the <a
+  href="https://ai.google.dev/edge/mediapipe/solutions/vision/hand_landmarker#configurations_options"
+    target="_blank"
+  >docs</a>.</em></p>
+<p>
+
+
+
+
+
+
+<figure>
+      <img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Hand Landmarks"
+    srcset="
+      /posts/theremin/hand-landmarks_hu_2fac8de5eda34d14.png  330w,
+      /posts/theremin/hand-landmarks_hu_5060ddd0de1418f1.png  660w,
+      /posts/theremin/hand-landmarks_hu_6857b531b4440d27.png 1280w
+    "
+    data-zoom-src="/posts/theremin/hand-landmarks.png"
+    src="/posts/theremin/hand-landmarks.png">
+
+  
+</figure>
+</p>
+<p><em>Diagram of the 21 hand landmarks from the <a
+  href="https://ai.google.dev/edge/mediapipe/solutions/vision/hand_landmarker#configurations_options"
+    target="_blank"
+  >docs</a>.</em></p>
+<p>After trying the <a
+  href="https://mediapipe-studio.webapps.google.com/demo/hand_landmarker"
+    target="_blank"
+  >demo</a>, I knew I wanted to use the model in a quick, fun project, however I wanted to do something a bit more original than a &ldquo;gesture-controlled mouse pointer&rdquo;. The first thing that came to mind was&hellip; a virtual theremin.</p>
+<p>Quick historical tangent: the <a
+  href="https://en.wikipedia.org/wiki/Theremin"
+    target="_blank"
+  >theremin</a> is a musical instrument invented in 1920 by <a
+  href="https://en.wikipedia.org/wiki/Leon_Theremin"
+    target="_blank"
+  >Leon Theremin (Lev Termen)</a>, a Soviet engineer. The instrument works by &hellip; and is one of the few instruments played without physical contact.</p>
+<p>This latter is the main reason why I decided to go with the theremin and not another instrument &ndash; it is played without physical contact, so waving your hands in-front of the webcam would make for a failry realistic experience (at least more realistic than pretending to play the drums or guitar in thin air).</p>
+<p>Despite what I said about originality earlier, I&rsquo;m not the first person to think of this project. After a quick web search, I found <a
+  href="https://theremin.app/"
+    target="_blank"
+  >https://theremin.app/</a> &ndash; a beautifully designed site that allows you to play the theremin by either using your mouse or by tracking your hands through the webcam. However, I encountered a few issues with the theremin.app implementation I wanted to fix in my version.</p>
+<p>First, I could not get finger-tracking to work. Second, the pitch changes are very jumpy, resulting in stoccato notes instead of the smooth, continuous sound of a real theremin. Both issues take away from the realism, which I wanted to fix.</p>
+<p>I also wanted to make this project an opportunity to learn more CSS and JavaScript, as well as learn more about synthesizers. Below is a step-by-step description of how you can recreate the same project. The full code on GitHub will be linked at the end.</p>
+<p>A minimal implementation is as follows:</p>
+<ol>
+<li>Enable webcamm and detect hand(s) in each frame.</li>
+<li>Display the hands in 3D from a first-person perspective on a canvas with a 2D or 3D theremin.</li>
+<li>The hands should control the pitch and volume by moving towards/away from corresponding antennas.</li>
+</ol>
+
+<h2 class="relative group">Start Local HTTP Server 
+    <div id="start-local-http-server" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#start-local-http-server" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+<p>First, create a root directory for your project and create your <code>.html</code> and <code>.js</code> files in it. If you want to spice up your project with beautiful CSS, you can create a separate <code>.css</code> file, but since this is going to be a very minimal example, I&rsquo;m not going to bother.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">theremin_project/
+</span></span><span class="line"><span class="cl">├── index.html
+</span></span><span class="line"><span class="cl">└── script.js
+</span></span></code></pre></div><p>In the root directory, run the follwing command in the terminal to launch a local http server for your project.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">python3 -m http.server <span class="m">8000</span>
+</span></span></code></pre></div><p>You can now go to http://localhost:8000/ and view <code>index.html</code>.</p>
+
+<h2 class="relative group">Set Up Hand Landmarker 
+    <div id="set-up-hand-landmarker" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#set-up-hand-landmarker" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+<p>We will follow the Hand Landmarker <a
+  href="https://codepen.io/mediapipe-preview/pen/gOKBGPN"
+    target="_blank"
+  >code example</a> for the web.</p>
+<p>Paste the following into <code>index.html</code>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#34;en&#34;</span> <span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#34;UTF-8&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Hand-Tracking Theremin<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nc">invisible</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">opacity</span><span class="p">:</span> <span class="mf">0.2</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Hand-Tracking Theremin<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">section</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;demos&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;invisible&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;liveView&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;videoView&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">button</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;webcamButton&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">span</span> <span class="p">&gt;</span>ENABLE WEBCAM<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;position: relative;&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">video</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;webcam&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;position: abso&#34;</span> <span class="na">autoplay</span> <span class="na">playsinline</span><span class="p">&gt;&lt;/</span><span class="nt">video</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">canvas</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;output_canvas&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;output_canvas&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;position:
+</span></span></span><span class="line"><span class="cl"><span class="s">        absolute; left: 0px; top: 0px;&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">canvas</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="c">&lt;!-- partial --&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;module&#34;</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;./script.js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></span></code></pre></div><p>In the browser, your page should look like below.</p>
+<p>
+
+
+
+
+
+
+<figure>
+      <img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="index.html screenshot"
+    srcset="
+      /posts/theremin/ss1_hu_74e1545fda6dd33a.png  330w,
+      /posts/theremin/ss1_hu_5838bfeec98d8a2.png  660w,
+      /posts/theremin/ss1_hu_126c548ba4dfa951.png 1280w
+    "
+    data-zoom-src="/posts/theremin/ss1.png"
+    src="/posts/theremin/ss1.png">
+
+  
+</figure>
+</p>
+<p>Make sure that you are importing the MediaPipe scripts</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span></code></pre></div><p>before importing your own <code>script.js</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="c">&lt;!-- partial --&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;module&#34;</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;./script.js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span></code></pre></div><p>I will explain the <code>.invisible</code> CSS in a moment.</p>
+<p>Now paste the following code into <code>script.js</code>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span> <span class="nx">HandLandmarker</span><span class="p">,</span> <span class="nx">FilesetResolver</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&#34;https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.0&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">demosSection</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&#34;demos&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">handLandmarker</span> <span class="o">=</span> <span class="kc">undefined</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">runningMode</span> <span class="o">=</span> <span class="s2">&#34;IMAGE&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">enableWebcamButton</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">webcamRunning</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">rafID</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// Before we can use HandLandmarker class we must wait for it to finish
+</span></span></span><span class="line"><span class="cl"><span class="c1">// loading. Machine Learning models can be large and take a moment to
+</span></span></span><span class="line"><span class="cl"><span class="c1">// get everything needed to run.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">const</span> <span class="nx">createHandLandmarker</span> <span class="o">=</span> <span class="kr">async</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">vision</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">FilesetResolver</span><span class="p">.</span><span class="nx">forVisionTasks</span><span class="p">(</span><span class="s2">&#34;https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.0/wasm&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">handLandmarker</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">HandLandmarker</span><span class="p">.</span><span class="nx">createFromOptions</span><span class="p">(</span><span class="nx">vision</span><span class="p">,</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">baseOptions</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">modelAssetPath</span><span class="o">:</span> <span class="sb">`https://storage.googleapis.com/mediapipe-models/hand_landmarker/hand_landmarker/float16/1/hand_landmarker.task`</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">delegate</span><span class="o">:</span> <span class="s2">&#34;GPU&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">},</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">runningMode</span><span class="o">:</span> <span class="nx">runningMode</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">numHands</span><span class="o">:</span> <span class="mi">2</span>
+</span></span><span class="line"><span class="cl">    <span class="p">});</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">demosSection</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">remove</span><span class="p">(</span><span class="s2">&#34;invisible&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl"><span class="nx">createHandLandmarker</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">video</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&#34;webcam&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">canvasElement</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&#34;output_canvas&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">canvasCtx</span> <span class="o">=</span> <span class="nx">canvasElement</span><span class="p">.</span><span class="nx">getContext</span><span class="p">(</span><span class="s2">&#34;2d&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// Check if webcam access is supported.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">const</span> <span class="nx">hasGetUserMedia</span> <span class="o">=</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span> <span class="kd">var</span> <span class="nx">_a</span><span class="p">;</span> <span class="k">return</span> <span class="o">!!</span><span class="p">((</span><span class="nx">_a</span> <span class="o">=</span> <span class="nx">navigator</span><span class="p">.</span><span class="nx">mediaDevices</span><span class="p">)</span> <span class="o">===</span> <span class="kc">null</span> <span class="o">||</span> <span class="nx">_a</span> <span class="o">===</span> <span class="k">void</span> <span class="mi">0</span> <span class="o">?</span> <span class="k">void</span> <span class="mi">0</span> <span class="o">:</span> <span class="nx">_a</span><span class="p">.</span><span class="nx">getUserMedia</span><span class="p">);</span> <span class="p">};</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// If webcam supported, add event listener to button for when user
+</span></span></span><span class="line"><span class="cl"><span class="c1">// wants to activate it.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">if</span> <span class="p">(</span><span class="nx">hasGetUserMedia</span><span class="p">())</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">enableWebcamButton</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&#34;webcamButton&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">enableWebcamButton</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&#34;click&#34;</span><span class="p">,</span> <span class="nx">event</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">webcamRunning</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// turn webcam off;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nx">enableCam</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// turn webcam off
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nx">disableCam</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">});</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">console</span><span class="p">.</span><span class="nx">warn</span><span class="p">(</span><span class="s2">&#34;getUserMedia() is not supported by your browser&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// Enable the live webcam view and start detection.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">async</span> <span class="kd">function</span> <span class="nx">enableCam</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">handLandmarker</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;Wait! objectDetector not loaded yet.&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">webcamRunning</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">enableWebcamButton</span><span class="p">.</span><span class="nx">innerText</span> <span class="o">=</span> <span class="s2">&#34;DISABLE WEBCAM&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// getUsermedia parameters.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kr">const</span> <span class="nx">constraints</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">video</span><span class="o">:</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">    <span class="p">};</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// Activate the webcam stream.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kr">await</span> <span class="nx">handLandmarker</span><span class="p">.</span><span class="nx">setOptions</span><span class="p">({</span> <span class="nx">runningMode</span><span class="o">:</span> <span class="s2">&#34;VIDEO&#34;</span> <span class="p">});</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">navigator</span><span class="p">.</span><span class="nx">mediaDevices</span><span class="p">.</span><span class="nx">getUserMedia</span><span class="p">(</span><span class="nx">constraints</span><span class="p">).</span><span class="nx">then</span><span class="p">((</span><span class="nx">stream</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">video</span><span class="p">.</span><span class="nx">srcObject</span> <span class="o">=</span> <span class="nx">stream</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">video</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&#34;loadeddata&#34;</span><span class="p">,</span> <span class="nx">predictWebcam</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">});</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Disable webcam
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">function</span> <span class="nx">disableCam</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nx">video</span><span class="p">.</span><span class="nx">srcObject</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">video</span><span class="p">.</span><span class="nx">srcObject</span><span class="p">.</span><span class="nx">getTracks</span><span class="p">().</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">track</span> <span class="p">=&gt;</span> <span class="nx">track</span><span class="p">.</span><span class="nx">stop</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">video</span><span class="p">.</span><span class="nx">srcObject</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="nx">rafID</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">cancelAnimationFrame</span><span class="p">(</span><span class="nx">rafID</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">rafID</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">//cancelAnimationFrame(-1);
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nx">video</span><span class="p">.</span><span class="nx">removeEventListener</span><span class="p">(</span><span class="s2">&#34;loadeddata&#34;</span><span class="p">,</span> <span class="nx">predictWebcam</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nx">canvasCtx</span><span class="p">.</span><span class="nx">clearRect</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">canvasElement</span><span class="p">.</span><span class="nx">width</span><span class="p">,</span> <span class="nx">canvasElement</span><span class="p">.</span><span class="nx">height</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nx">webcamRunning</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">enableWebcamButton</span><span class="p">.</span><span class="nx">innerText</span> <span class="o">=</span> <span class="s2">&#34;ENABLE WEBCAM&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">lastVideoTime</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">results</span> <span class="o">=</span> <span class="kc">undefined</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">video</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kr">async</span> <span class="kd">function</span> <span class="nx">predictWebcam</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nx">canvasElement</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">width</span> <span class="o">=</span> <span class="nx">video</span><span class="p">.</span><span class="nx">videoWidth</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">canvasElement</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">height</span> <span class="o">=</span> <span class="nx">video</span><span class="p">.</span><span class="nx">videoHeight</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">canvasElement</span><span class="p">.</span><span class="nx">width</span> <span class="o">=</span> <span class="nx">video</span><span class="p">.</span><span class="nx">videoWidth</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">canvasElement</span><span class="p">.</span><span class="nx">height</span> <span class="o">=</span> <span class="nx">video</span><span class="p">.</span><span class="nx">videoHeight</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Now let&#39;s start detecting the stream.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kd">let</span> <span class="nx">startTimeMs</span> <span class="o">=</span> <span class="nx">performance</span><span class="p">.</span><span class="nx">now</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nx">lastVideoTime</span> <span class="o">!==</span> <span class="nx">video</span><span class="p">.</span><span class="nx">currentTime</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">lastVideoTime</span> <span class="o">=</span> <span class="nx">video</span><span class="p">.</span><span class="nx">currentTime</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">results</span> <span class="o">=</span> <span class="nx">handLandmarker</span><span class="p">.</span><span class="nx">detectForVideo</span><span class="p">(</span><span class="nx">video</span><span class="p">,</span> <span class="nx">startTimeMs</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">canvasCtx</span><span class="p">.</span><span class="nx">save</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">canvasCtx</span><span class="p">.</span><span class="nx">clearRect</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">canvasElement</span><span class="p">.</span><span class="nx">width</span><span class="p">,</span> <span class="nx">canvasElement</span><span class="p">.</span><span class="nx">height</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nx">results</span><span class="p">.</span><span class="nx">landmarks</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="p">(</span><span class="kr">const</span> <span class="nx">landmarks</span> <span class="k">of</span> <span class="nx">results</span><span class="p">.</span><span class="nx">landmarks</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">drawConnectors</span><span class="p">(</span><span class="nx">canvasCtx</span><span class="p">,</span> <span class="nx">landmarks</span><span class="p">,</span> <span class="nx">HAND_CONNECTIONS</span><span class="p">,</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">color</span><span class="o">:</span> <span class="s2">&#34;#00FF00&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">lineWidth</span><span class="o">:</span> <span class="mi">5</span>
+</span></span><span class="line"><span class="cl">            <span class="p">});</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">drawLandmarks</span><span class="p">(</span><span class="nx">canvasCtx</span><span class="p">,</span> <span class="nx">landmarks</span><span class="p">,</span> <span class="p">{</span> <span class="nx">color</span><span class="o">:</span> <span class="s2">&#34;#FF0000&#34;</span><span class="p">,</span> <span class="nx">lineWidth</span><span class="o">:</span> <span class="mi">2</span> <span class="p">});</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">canvasCtx</span><span class="p">.</span><span class="nx">restore</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// Call this function again to keep predicting when the browser is ready.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">if</span> <span class="p">(</span><span class="nx">webcamRunning</span> <span class="o">===</span> <span class="kc">true</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">rafID</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">requestAnimationFrame</span><span class="p">(</span><span class="nx">predictWebcam</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Click the ENABLE WEBCAM button, allow webcam permissions, and you should see something like this.</p>
+<p>
+
+
+
+
+
+
+<figure>
+      <img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="index.html screenshot"
+    srcset="
+      /posts/theremin/ss2_hu_4171bc72373bf979.png  330w,
+      /posts/theremin/ss2_hu_5650d672da8aaa50.png  660w,
+      /posts/theremin/ss2_hu_74e3e7d6e2d16306.png 1280w
+    "
+    data-zoom-src="/posts/theremin/ss2.png"
+    src="/posts/theremin/ss2.png">
+
+  
+</figure>
+</p>
+<p>If you click DISABLE WEBCAM, the webcam should shut down. You should be able to re-enable it without error. The code is somewhat easy to understand, but let here&rsquo;s one important part:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">rafID</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// ...
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">disableCam</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nx">video</span><span class="p">.</span><span class="nx">srcObject</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// ...
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="nx">rafID</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">cancelAnimationFrame</span><span class="p">(</span><span class="nx">rafID</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">rafID</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// ...
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// ...
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// ... 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="kr">async</span> <span class="kd">function</span> <span class="nx">predictWebcam</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// ...
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">if</span> <span class="p">(</span><span class="nx">webcamRunning</span> <span class="o">===</span> <span class="kc">true</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">rafID</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">requestAnimationFrame</span><span class="p">(</span><span class="nx">predictWebcam</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>When disabling the webcam, you must cancel the last frame by its ID (<code>rafID</code>), otherwise upon re-enabling the camera you will get this error:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">Uncaught <span class="o">(</span>in promise<span class="o">)</span> Error: WaitUntilIdle failed: <span class="nv">$CalculatorGraph</span>::Run<span class="o">()</span> failed in Run: 
+</span></span><span class="line"><span class="cl">Calculator::Process<span class="o">()</span> <span class="k">for</span> node <span class="s2">&#34;mediapipe_tasks_vision_hand_landmarker_handlandmarkergraph__mediapipe_tasks_vision_hand_detector_handdetectorgraph__mediapipe_tasks_components_processors_imagepreprocessinggraph__ImageToTensorCalculator&#34;</span> failed: RET_CHECK failure <span class="o">(</span>third_party/mediapipe/calculators/tensor/image_to_tensor_utils.cc:56<span class="o">)</span> roi-&gt;width &gt; <span class="m">0</span> <span class="o">&amp;&amp;</span> roi-&gt;height &gt; <span class="m">0</span> ROI width and height must be &gt; 0.<span class="p">;</span> WaitUntilIdle failed
+</span></span></code></pre></div><p>This minimal implementation of Hand Landmarker should be enough to get you started. However, let&rsquo;s take it further and have the hands display from a first-person perspective in a separate 3D canvas using Three.js.</p>
+
+<h2 class="relative group">Add Three.js 3D Canvas 
+    <div id="add-threejs-3d-canvas" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#add-threejs-3d-canvas" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+<p>Add the following code to the <code>&lt;head&gt;</code> of <code>index.html</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;importmap&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="s2">&#34;imports&#34;</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="s2">&#34;three&#34;</span><span class="o">:</span> <span class="s2">&#34;https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.module.js&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="s2">&#34;three/addons/&#34;</span><span class="o">:</span> <span class="s2">&#34;https://cdn.jsdelivr.net/npm/three@0.152.2/examples/jsm/&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span></code></pre></div><p>Then import Three.js in <code>script.js</code> below your Hand Landmarker import:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">import</span> <span class="o">*</span> <span class="nx">as</span> <span class="nx">THREE</span> <span class="nx">from</span> <span class="s1">&#39;three&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span> <span class="nx">OrbitControls</span> <span class="p">}</span>  <span class="nx">from</span> <span class="s1">&#39;three/addons/controls/OrbitControls.js&#39;</span><span class="p">;</span>
+</span></span></code></pre></div><p>Let&rsquo;s edit <code>index.html</code> to create a second canvas for 3D rendering next to of the webcam stream. Edit the <code>liveView</code> container to add a new canvas below <code>output_canvas</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">canvas</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;output_canvas&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;output_canvas&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;position:
+</span></span></span><span class="line"><span class="cl"><span class="s">absolute; left: 0px; top: 0px;&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">canvas</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="c">&lt;!-- added the new canvas below --&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">canvas</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;canvas3d&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;canvas3d&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;position:
+</span></span></span><span class="line"><span class="cl"><span class="s">absolute; right: 0px; top: 0px;&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">canvas</span><span class="p">&gt;</span>
+</span></span></code></pre></div><p>Now let&rsquo;s connected Three renderer to <code>canvas3d</code>. Add the following code to <code>script.js</code> after where you add the listener event to the ENABLE WEBCAM button:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="c1">// ----- Three.js setup -----
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="c1">// Scene
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">const</span> <span class="nx">scene</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">THREE</span><span class="p">.</span><span class="nx">Scene</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">width</span> <span class="o">=</span> <span class="mi">640</span><span class="p">;</span> <span class="c1">// you can change this to whatever you want
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">let</span> <span class="nx">height</span> <span class="o">=</span> <span class="mi">480</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Camera
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">const</span> <span class="nx">camera</span>   <span class="o">=</span> <span class="k">new</span> <span class="nx">THREE</span><span class="p">.</span><span class="nx">PerspectiveCamera</span><span class="p">(</span><span class="mi">60</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">,</span> <span class="mi">10</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">camera</span><span class="p">.</span><span class="nx">position</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">camera</span><span class="p">.</span><span class="nx">lookAt</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">camera</span><span class="p">.</span><span class="nx">aspect</span> <span class="o">=</span> <span class="nx">width</span><span class="o">/</span> <span class="nx">height</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">camera</span><span class="p">.</span><span class="nx">updateProjectionMatrix</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Renderer
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">const</span> <span class="nx">canvas3D</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&#34;canvas3d&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">renderer</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">THREE</span><span class="p">.</span><span class="nx">WebGLRenderer</span><span class="p">({</span><span class="nx">alpha</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span> <span class="nx">canvas</span><span class="o">:</span> <span class="nx">canvas3D</span><span class="p">});</span>
+</span></span><span class="line"><span class="cl"><span class="nx">renderer</span><span class="p">.</span><span class="nx">setClearColor</span><span class="p">(</span><span class="mh">0xdddddd</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">renderer</span><span class="p">.</span><span class="nx">setSize</span><span class="p">(</span><span class="nx">width</span><span class="p">,</span> <span class="nx">height</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// size of the helpers in world units
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">const</span> <span class="nx">helperSize</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">gridDivisions</span> <span class="o">=</span><span class="mi">10</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// grid
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">const</span> <span class="nx">gridHelper</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">THREE</span><span class="p">.</span><span class="nx">GridHelper</span><span class="p">(</span><span class="nx">helperSize</span><span class="p">,</span> <span class="nx">gridDivisions</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">scene</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="nx">gridHelper</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// axes
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">const</span> <span class="nx">axesHelper</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">THREE</span><span class="p">.</span><span class="nx">AxesHelper</span><span class="p">(</span><span class="nx">helperSize</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">scene</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="nx">axesHelper</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// OrbitControls
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">const</span> <span class="nx">controls</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">OrbitControls</span><span class="p">(</span> <span class="nx">camera</span><span class="p">,</span> <span class="nx">renderer</span><span class="p">.</span><span class="nx">domElement</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">controls</span><span class="p">.</span><span class="nx">update</span><span class="p">();</span>
+</span></span></code></pre></div><p>You should see something like the image below. You should be able to rotate, pan and zoom the rendered scene using left-click, right-click and scroll wheel, respectively.</p>
+<p>
+
+
+
+
+
+
+<figure>
+      <img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="index.html screenshot"
+    srcset="
+      /posts/theremin/ss3_hu_3a0f3c98e25d8bae.png  330w,
+      /posts/theremin/ss3_hu_60a431d00b5b139d.png  660w,
+      /posts/theremin/ss3_hu_3a83f6cf2ff5749a.png 1280w
+    "
+    data-zoom-src="/posts/theremin/ss3.png"
+    src="/posts/theremin/ss3.png">
+
+  
+</figure>
+</p>
+<p>It&rsquo;s later going to be important to know which axis is which, so remember:</p>
+<ul>
+<li>X: red</li>
+<li>Y: green</li>
+<li>Z: blue</li>
+</ul>
+
+<h2 class="relative group">Render Hand Landmarks in 3D 
+    <div id="render-hand-landmarks-in-3d" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#render-hand-landmarks-in-3d" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+<p>Now we will edit <code>predictWebcam()</code> to display the hand landmarks in 3D. First, add these imports to the top of <code>script.js</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span> <span class="nx">LineSegments2</span> <span class="p">}</span>      <span class="nx">from</span> <span class="s1">&#39;three/addons/lines/LineSegments2.js&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span> <span class="nx">LineMaterial</span> <span class="p">}</span>       <span class="nx">from</span> <span class="s1">&#39;three/addons/lines/LineMaterial.js&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span> <span class="nx">LineSegmentsGeometry</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;three/addons/lines/LineSegmentsGeometry.js&#39;</span><span class="p">;</span>
+</span></span></code></pre></div><p>Next, add this code below your renderer set-up code:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="c1">// Hands geometry
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">const</span> <span class="nx">lineSegWidth</span> <span class="o">=</span> <span class="mf">0.01</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Hand 1
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">const</span> <span class="nx">skeletonGeom1</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">LineSegmentsGeometry</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">skeletonMat1</span>  <span class="o">=</span> <span class="k">new</span> <span class="nx">LineMaterial</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">color</span><span class="o">:</span>       <span class="mh">0xff0000</span><span class="p">,</span> <span class="c1">// red color
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nx">linewidth</span><span class="o">:</span>   <span class="nx">lineSegWidth</span><span class="p">,</span>    <span class="c1">// 0.005 world units thick
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nx">worldUnits</span><span class="o">:</span>  <span class="kc">true</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">skeletonMesh1</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">LineSegments2</span><span class="p">(</span><span class="nx">skeletonGeom1</span><span class="p">,</span> <span class="nx">skeletonMat1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">scene</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="nx">skeletonMesh1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Hand 2
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">const</span> <span class="nx">skeletonGeom2</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">LineSegmentsGeometry</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">skeletonMat2</span>  <span class="o">=</span> <span class="k">new</span> <span class="nx">LineMaterial</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">color</span><span class="o">:</span>       <span class="mh">0x0000ff</span><span class="p">,</span> <span class="c1">// blue color
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nx">linewidth</span><span class="o">:</span>   <span class="nx">lineSegWidth</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">worldUnits</span><span class="o">:</span>  <span class="kc">true</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">skeletonMesh2</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">LineSegments2</span><span class="p">(</span><span class="nx">skeletonGeom2</span><span class="p">,</span> <span class="nx">skeletonMat2</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">scene</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="nx">skeletonMesh2</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// get renderer size
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">const</span> <span class="nx">size</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">THREE</span><span class="p">.</span><span class="nx">Vector2</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="nx">renderer</span><span class="p">.</span><span class="nx">getSize</span><span class="p">(</span><span class="nx">size</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Set resolution to match renderer size
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">skeletonMat1</span><span class="p">.</span><span class="nx">resolution</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="nx">size</span><span class="p">.</span><span class="nx">x</span><span class="p">,</span> <span class="nx">size</span><span class="p">.</span><span class="nx">y</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">skeletonMat2</span><span class="p">.</span><span class="nx">resolution</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="nx">size</span><span class="p">.</span><span class="nx">x</span><span class="p">,</span> <span class="nx">size</span><span class="p">.</span><span class="nx">y</span><span class="p">);</span>
+</span></span></code></pre></div><p>This code creates two meshes &ndash; one for each hand. For clarity, I made the first one red and the second one blue, but you can choose any color. Next we need to understand what results the Hand Landmarker actually returns. Quoting from the <a
+  href="https://ai.google.dev/edge/mediapipe/solutions/vision/hand_landmarker#configurations_options"
+    target="_blank"
+  >docs</a>:</p>
+<blockquote>
+<ul>
+<li><strong>Landmarks:</strong> There are 21 hand landmarks, each composed of x, y and z coordinates. The x and y coordinates are normalized to [0.0, 1.0] by the image width and height, respectively. The z coordinate represents the landmark depth, with the depth at the wrist being the origin. The smaller the value, the closer the landmark is to the camera. The magnitude of z uses roughly the same scale as x.</li>
+<li><strong>World Landmarks:</strong> The 21 hand landmarks are also presented in world coordinates. Each landmark is composed of x, y, and z, representing real-world 3D coordinates in meters with the origin at the hand’s geometric center.</li>
+</ul></blockquote>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">HandLandmarkerResult</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">Handedness</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">Categories #0</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">index        </span><span class="p">:</span><span class="w"> </span><span class="m">0</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">score        </span><span class="p">:</span><span class="w"> </span><span class="m">0.98396</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">categoryName </span><span class="p">:</span><span class="w"> </span><span class="l">Left</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">Landmarks</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">Landmark #0</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">x            </span><span class="p">:</span><span class="w"> </span><span class="m">0.638852</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">y            </span><span class="p">:</span><span class="w"> </span><span class="m">0.671197</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">z            </span><span class="p">:</span><span class="w"> </span>-<span class="m">3.</span><span class="l">41E-7</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">Landmark #1</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">x            </span><span class="p">:</span><span class="w"> </span><span class="m">0.634599</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">y            </span><span class="p">:</span><span class="w"> </span><span class="m">0.536441</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">z            </span><span class="p">:</span><span class="w"> </span>-<span class="m">0.06984</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="l">... (21 landmarks for a hand)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">WorldLandmarks</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">Landmark #0</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">x            </span><span class="p">:</span><span class="w"> </span><span class="m">0.067485</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">y            </span><span class="p">:</span><span class="w"> </span><span class="m">0.031084</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">z            </span><span class="p">:</span><span class="w"> </span><span class="m">0.055223</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">Landmark #1</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">x            </span><span class="p">:</span><span class="w"> </span><span class="m">0.063209</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">y            </span><span class="p">:</span><span class="w"> </span>-<span class="m">0.00382</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">z            </span><span class="p">:</span><span class="w"> </span><span class="m">0.020920</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="l">... (21 world landmarks for a hand)</span><span class="w">
+</span></span></span></code></pre></div><p>After experimenting with the different co-ordinate readings, this is what we&rsquo;re going to do: the hands will move in 3D <em>locally</em>, about the wrist (landmark #0). However <em>globally</em> they will move in the x-y plane only. Add these two helper functions:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">getHandPoints</span><span class="p">(</span><span class="nx">results</span><span class="p">,</span> <span class="nx">hand_index</span><span class="p">,</span> <span class="nx">pts</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">moving_origin</span> <span class="o">=</span> <span class="nx">results</span><span class="p">.</span><span class="nx">landmarks</span><span class="p">[</span><span class="nx">hand_index</span><span class="p">][</span><span class="mi">0</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">hand3D</span> <span class="o">=</span> <span class="nx">results</span><span class="p">.</span><span class="nx">worldLandmarks</span><span class="p">[</span><span class="nx">hand_index</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">wrist</span> <span class="o">=</span> <span class="nx">hand3D</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="p">(</span><span class="kr">const</span> <span class="p">[</span><span class="nx">i</span><span class="p">,</span> <span class="nx">j</span><span class="p">]</span> <span class="k">of</span> <span class="nx">HAND_CONNECTIONS</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kr">const</span> <span class="nx">A</span> <span class="o">=</span> <span class="nx">hand3D</span><span class="p">[</span><span class="nx">i</span><span class="p">],</span> <span class="nx">B</span> <span class="o">=</span> <span class="nx">hand3D</span><span class="p">[</span><span class="nx">j</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="nx">pts</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">A</span><span class="p">.</span><span class="nx">x</span><span class="p">,</span> <span class="nx">A</span><span class="p">.</span><span class="nx">y</span><span class="p">,</span> <span class="nx">A</span><span class="p">.</span><span class="nx">z</span><span class="p">,</span> <span class="nx">B</span><span class="p">.</span><span class="nx">x</span><span class="p">,</span> <span class="nx">B</span><span class="p">.</span><span class="nx">y</span><span class="p">,</span> <span class="nx">B</span><span class="p">.</span><span class="nx">z</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">updateHandSkeleton</span><span class="p">(</span><span class="nx">geom</span><span class="p">,</span> <span class="nx">mesh</span><span class="p">,</span> <span class="nx">pts</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">geom</span><span class="p">.</span><span class="nx">setPositions</span><span class="p">(</span><span class="nx">pts</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">mesh</span><span class="p">.</span><span class="nx">rotation</span><span class="p">.</span><span class="nx">y</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">PI</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">mesh</span><span class="p">.</span><span class="nx">updateMatrixWorld</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">geom</span><span class="p">.</span><span class="nx">computeBoundingSphere</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Then edit <code>predictWebcam</code> as follows:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">async</span> <span class="kd">function</span> <span class="nx">predictWebcam</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nx">canvasElement</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">width</span> <span class="o">=</span> <span class="nx">video</span><span class="p">.</span><span class="nx">videoWidth</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">canvasElement</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">height</span> <span class="o">=</span> <span class="nx">video</span><span class="p">.</span><span class="nx">videoHeight</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">canvasElement</span><span class="p">.</span><span class="nx">width</span> <span class="o">=</span> <span class="nx">video</span><span class="p">.</span><span class="nx">videoWidth</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">canvasElement</span><span class="p">.</span><span class="nx">height</span> <span class="o">=</span> <span class="nx">video</span><span class="p">.</span><span class="nx">videoHeight</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Now let&#39;s start detecting the stream.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kd">let</span> <span class="nx">startTimeMs</span> <span class="o">=</span> <span class="nx">performance</span><span class="p">.</span><span class="nx">now</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nx">lastVideoTime</span> <span class="o">!==</span> <span class="nx">video</span><span class="p">.</span><span class="nx">currentTime</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">lastVideoTime</span> <span class="o">=</span> <span class="nx">video</span><span class="p">.</span><span class="nx">currentTime</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">results</span> <span class="o">=</span> <span class="nx">handLandmarker</span><span class="p">.</span><span class="nx">detectForVideo</span><span class="p">(</span><span class="nx">video</span><span class="p">,</span> <span class="nx">startTimeMs</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">canvasCtx</span><span class="p">.</span><span class="nx">save</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">canvasCtx</span><span class="p">.</span><span class="nx">clearRect</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">canvasElement</span><span class="p">.</span><span class="nx">width</span><span class="p">,</span> <span class="nx">canvasElement</span><span class="p">.</span><span class="nx">height</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nx">results</span><span class="p">.</span><span class="nx">landmarks</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="p">(</span><span class="kr">const</span> <span class="nx">landmarks</span> <span class="k">of</span> <span class="nx">results</span><span class="p">.</span><span class="nx">landmarks</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">drawConnectors</span><span class="p">(</span><span class="nx">canvasCtx</span><span class="p">,</span> <span class="nx">landmarks</span><span class="p">,</span> <span class="nx">HAND_CONNECTIONS</span><span class="p">,</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">color</span><span class="o">:</span> <span class="s2">&#34;#00FF00&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">lineWidth</span><span class="o">:</span> <span class="mi">5</span>
+</span></span><span class="line"><span class="cl">            <span class="p">});</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">drawLandmarks</span><span class="p">(</span><span class="nx">canvasCtx</span><span class="p">,</span> <span class="nx">landmarks</span><span class="p">,</span> <span class="p">{</span> <span class="nx">color</span><span class="o">:</span> <span class="s2">&#34;#FF0000&#34;</span><span class="p">,</span> <span class="nx">lineWidth</span><span class="o">:</span> <span class="mi">2</span> <span class="p">});</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">// ----- Added this -----
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nx">skeletonMesh1</span><span class="p">.</span><span class="nx">visible</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">skeletonMesh2</span><span class="p">.</span><span class="nx">visible</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="kr">const</span> <span class="nx">pts1</span> <span class="o">=</span> <span class="p">[];</span>
+</span></span><span class="line"><span class="cl">        <span class="kr">const</span> <span class="nx">pts2</span> <span class="o">=</span> <span class="p">[];</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="nx">results</span><span class="p">.</span><span class="nx">landmarks</span><span class="p">.</span><span class="nx">length</span> <span class="o">===</span> <span class="mi">1</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">getHandPoints</span><span class="p">(</span><span class="nx">results</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">pts1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">updateHandSkeleton</span><span class="p">(</span><span class="nx">skeletonGeom1</span><span class="p">,</span> <span class="nx">skeletonMesh1</span><span class="p">,</span> <span class="nx">pts1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">results</span><span class="p">.</span><span class="nx">landmarks</span><span class="p">.</span><span class="nx">length</span> <span class="o">===</span> <span class="mi">2</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="nx">getHandPoints</span><span class="p">(</span><span class="nx">results</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">pts1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">getHandPoints</span><span class="p">(</span><span class="nx">results</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="nx">pts2</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="nx">updateHandSkeleton</span><span class="p">(</span><span class="nx">skeletonGeom1</span><span class="p">,</span> <span class="nx">skeletonMesh1</span><span class="p">,</span> <span class="nx">pts1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">updateHandSkeleton</span><span class="p">(</span><span class="nx">skeletonGeom2</span><span class="p">,</span> <span class="nx">skeletonMesh2</span><span class="p">,</span> <span class="nx">pts2</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="k">else</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">// handle the situation when there are more than two hands.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">skeletonMesh1</span><span class="p">.</span><span class="nx">visible</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">skeletonMesh2</span><span class="p">.</span><span class="nx">visible</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// -------------------------------
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    
+</span></span><span class="line"><span class="cl">    <span class="nx">canvasCtx</span><span class="p">.</span><span class="nx">restore</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// Call this function again to keep predicting when the browser is ready.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">if</span> <span class="p">(</span><span class="nx">webcamRunning</span> <span class="o">===</span> <span class="kc">true</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">rafID</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">requestAnimationFrame</span><span class="p">(</span><span class="nx">predictWebcam</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>At this point, we don&rsquo;t really need to draw the landmarks on the 2D canvas. You may want to remove the 2D landmark drawing code and the 2D canvas alltogether, but you don&rsquo;t have to. I will remove it in this example to prevent clutter.</p>
+<p>You might notice that while the two hands appear to be moving in 3D, they are fixed at the origin. This is precisely because &ldquo;each landmark is composed of x, y, and z, representing real-world 3D coordinates in meters with the origin at the hand’s geometric center,&rdquo; as said in the docs.</p>
+
+<h2 class="relative group">Import Theremin 3D Model 
+    <div id="import-theremin-3d-model" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#import-theremin-3d-model" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+
+<h2 class="relative group">Calculated Distances To Antennas 
+    <div id="calculated-distances-to-antennas" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#calculated-distances-to-antennas" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+
+<h2 class="relative group">Add Sound With Tone.js 
+    <div id="add-sound-with-tonejs" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#add-sound-with-tonejs" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+
+<h2 class="relative group">Conclusion 
+    <div id="conclusion" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#conclusion" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+
+          
+          
+          
+        </div>
+
+        
+
+        
+
+        
+
+        
+
+      </div>
+
+      
+      
+        
+        
+          
+          
+        
+        
+        
+        <script
+          type="text/javascript"
+          src="/js/page.min.54b6f4371722649edbe871e431d8670d670878c22be8f36e229fe53cc9b786fe25a834def5e6de621f7a3e37b72bc8cd73839aa5ed907ed6cbd45cd3e1b0fa20.js"
+          integrity="sha512-VLb0NxciZJ7b6HHkMdhnDWcIeMIr6PNuIp/lPMm3hv4lqDTe9ebeYh96Pje3K8jNc4Oape2QftbL1FzT4bD6IA=="
+          data-oid="views_posts/theremin/index.md"
+          data-oid-likes="likes_posts/theremin/index.md"></script>
+      
+
+    </section>
+    <footer class="pt-8 max-w-prose print:hidden">
+      
+  
+
+
+      
+    </footer>
+  </article>
+
+        <div id="top-scroller" class="pointer-events-none absolute top-[110vh] bottom-0 w-12 ltr:right-0 rtl:left-0">
+  <a
+    href="#the-top"
+    class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 mb-16 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="Scroll to top"
+    title="Scroll to top">
+    &uarr;
+  </a>
+</div>
+
+      </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+  
+  <div class="flex items-center justify-between">
+    
+    
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          &copy;
+          2025
+          Polina Shopina
+      </p>
+    
+
+    
+    
+      <p class="text-xs text-neutral-500 dark:text-neutral-400">
+        
+        
+        Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a>
+      </p>
+    
+
+  </div>
+  <script>
+    
+    mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+      margin: 24,
+      background: 'rgba(0,0,0,0.5)',
+      scrollOffset: 0,
+    })
+    
+  </script> 
+  
+  <script
+    type="text/javascript"
+    src="/js/process.min.ee03488f19c93c2efb199e2e3014ea5f3cb2ce7d45154adb3399a158cac27ca52831db249ede5bb602700ef87eb02434139de0858af1818ab0fb4182472204a4.js"
+    integrity="sha512-7gNIjxnJPC77GZ4uMBTqXzyyzn1FFUrbM5mhWMrCfKUoMdsknt5btgJwDvh&#43;sCQ0E53ghYrxgYqw&#43;0GCRyIEpA=="></script>
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"
+  data-url="http://localhost:1313/">
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          
+
+  <span class="relative block icon">
+    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+
+  </span>
+
+
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0">
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)">
+        
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+
+  </span>
+
+
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+  
+</html>

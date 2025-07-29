@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Agriculture on Polina Shopina</title>
+    <link>http://localhost:1313/tags/agriculture/</link>
+    <description>Recent content in Agriculture on Polina Shopina</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2025 Polina Shopina</copyright>
+    <lastBuildDate>Tue, 15 Jul 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/agriculture/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Autonomous Seed Interrogator</title>
+      <link>http://localhost:1313/projects/seed/</link>
+      <pubDate>Tue, 15 Jul 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/projects/seed/</guid>
+      <description>Built an autonomous seed-sorting device for a Vancouver-based start-up Insporos.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/projects/seed/featured.jpeg" />
+    </item>
+    
+  </channel>
+</rss>

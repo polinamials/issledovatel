@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Qt on Polina Shopina</title>
+    <link>http://localhost:1313/tags/qt/</link>
+    <description>Recent content in Qt on Polina Shopina</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2025 Polina Shopina</copyright>
+    <lastBuildDate>Tue, 15 Jul 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/qt/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Ballistic Interceptor</title>
+      <link>http://localhost:1313/projects/interceptor/</link>
+      <pubDate>Tue, 15 Jul 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/projects/interceptor/</guid>
+      <description>Built an automated ballistic interceptor that used a high-speed stereo vision system and OpenCV to predict 3D ball trajectories for interception with a projectile from a stepper‑driven BB launcher.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/projects/interceptor/featured.jpg" />
+    </item>
+    
+    <item>
+      <title>TRIUMF Internship</title>
+      <link>http://localhost:1313/projects/triumf/</link>
+      <pubDate>Tue, 15 Jul 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/projects/triumf/</guid>
+      <description>Improved an automated Mu‑metal‑shielded gradiometer and wrote Python scripts to control multimeters and oscilloscopes for fluxgate measurements.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/projects/triumf/featured.jpg" />
+    </item>
+    
+  </channel>
+</rss>

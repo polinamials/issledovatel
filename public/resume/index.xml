@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Resumes on Polina Shopina</title>
+    <link>http://localhost:1313/resume/</link>
+    <description>Recent content in Resumes on Polina Shopina</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2025 Polina Shopina</copyright>
+    <lastBuildDate>Wed, 16 Jul 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/resume/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>About Me</title>
+      <link>http://localhost:1313/resume/resume/</link>
+      <pubDate>Wed, 16 Jul 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/resume/resume/</guid>
+      <description>&lt;p&gt;Hi! I’m Polina, a recent Engineering Physics graduate from the University of British Columbia. My interests include robotics, aerospace engineering, physics, and machine learning. I’ve worked on a number of cool projects, which you can check out &lt;a
+  href=&#34;http://localhost:1313/projects/&#34;&gt;here&lt;/a&gt;. My most recent project is an automated ballistic interceptor. Besides engineering, I enjoy hiking, reading and film photography.&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>

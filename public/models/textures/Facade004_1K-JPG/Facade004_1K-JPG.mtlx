@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<materialx version="1.38" fileprefix="./">
+  <standard_surface xpos="6.159420" ypos="-1.879310" type="surfaceshader" name="Facade004_1K_JPG_StandardSurface">
+    <input value="0" type="float" name="specular" />
+    <input value="1" type="float" name="coat" />
+    <input value="1, 1, 1" type="color3" name="coat_color" />
+    <input value="1" type="float" name="base" />
+    <input type="color3" nodename="Facade004_1K_JPG_Color" name="base_color" />
+    <input value="1" type="float" name="emission" />
+    <input type="color3" nodename="Facade004_1K_JPG_Emission" name="emission_color" />
+    <input value="1" type="float" nodename="Facade004_1K_JPG_Metalness" name="metalness" />
+    <input type="vector3" nodename="normalmap" name="normal" />
+    <input type="vector3" nodename="normalmap" name="coat_normal" />
+    <input type="float" nodename="Facade004_1K_JPG_Roughness" name="specular_roughness" />
+    <input type="float" nodename="Facade004_1K_JPG_Roughness" name="coat_roughness" />
+  </standard_surface>
+  <surfacematerial xpos="8.695652" ypos="0.000000" type="material" name="Facade004_1K_JPG">
+    <input type="surfaceshader" nodename="Facade004_1K_JPG_StandardSurface" name="surfaceshader" />
+    <input type="displacementshader" nodename="displacement" name="displacementshader" />
+  </surfacematerial>
+  <tiledimage xpos="3.623188" ypos="-3.103448" type="color3" name="Facade004_1K_JPG_Color">
+    <input value="Facade004_1K-JPG_Color.jpg" type="filename" colorspace="srgb_texture" name="file" />
+    <input value="1.0, 1.0" type="vector2" name="uvtiling" />
+  </tiledimage>
+  <tiledimage xpos="3.623188" ypos="5.163793" type="float" name="Facade004_1K_JPG_Displacement">
+    <input value="Facade004_1K-JPG_Displacement.jpg" type="filename" name="file" />
+    <input value="1.0, 1.0" type="vector2" name="uvtiling" />
+  </tiledimage>
+  <displacement xpos="6.159420" ypos="1.879310" type="displacementshader" name="displacement">
+    <input type="float" nodename="Facade004_1K_JPG_Displacement" name="displacement" />
+    <input value="1.0" type="float" name="scale" />
+  </displacement>
+  <tiledimage xpos="3.623188" ypos="0.913793" type="color3" name="Facade004_1K_JPG_Emission">
+    <input value="Facade004_1K-JPG_Emission.jpg" type="filename" name="file" />
+    <input value="1.0, 1.0" type="vector2" name="uvtiling" />
+  </tiledimage>
+  <tiledimage xpos="3.623188" ypos="-1.758621" type="float" name="Facade004_1K_JPG_Metalness">
+    <input value="Facade004_1K-JPG_Metalness.jpg" type="filename" name="file" />
+    <input value="1.0, 1.0" type="vector2" name="uvtiling" />
+  </tiledimage>
+  <tiledimage xpos="1.086957" ypos="0.879310" type="vector3" name="Facade004_1K_JPG_NormalGL">
+    <input value="Facade004_1K-JPG_NormalGL.jpg" type="filename" name="file" />
+    <input value="1.0, 1.0" type="vector2" name="uvtiling" />
+  </tiledimage>
+  <normalmap xpos="3.623188" ypos="3.586207" type="vector3" name="normalmap">
+    <input type="vector3" nodename="Facade004_1K_JPG_NormalGL" name="in" />
+    <input value="1.0" type="float" name="scale" />
+  </normalmap>
+  <tiledimage xpos="3.623188" ypos="-0.413793" type="float" name="Facade004_1K_JPG_Roughness">
+    <input value="Facade004_1K-JPG_Roughness.jpg" type="filename" name="file" />
+    <input value="1.0, 1.0" type="vector2" name="uvtiling" />
+  </tiledimage>
+</materialx>

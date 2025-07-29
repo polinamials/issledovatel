@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Internship on Polina Shopina</title>
+    <link>http://localhost:1313/tags/internship/</link>
+    <description>Recent content in Internship on Polina Shopina</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2025 Polina Shopina</copyright>
+    <lastBuildDate>Tue, 15 Jul 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/internship/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Orbital Research Internship</title>
+      <link>http://localhost:1313/projects/orbital/</link>
+      <pubDate>Tue, 15 Jul 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/projects/orbital/</guid>
+      <description>Designed RF up/down converter components in SolidWorks, including machine‑shop drawings with GD&amp;amp;T. Fabricated customer‑specific mechanical modifications on time. Built and automated a vibration‑testing jig.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/projects/orbital/featured.jpg" />
+    </item>
+    
+  </channel>
+</rss>

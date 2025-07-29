@@ -1,0 +1,25 @@
+<!-- {{ $recentArticles := 5 }}
+{{ $recentArticles = .Site.Params.homepage.showRecentItems }}
+
+
+<section class="w-full grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+  {{ range first $recentArticles (
+        .Paginate (where .Site.RegularPages "Section" "posts")
+      ).Pages }}
+    {{ partial "article-link/card.html" . }}
+  {{ end }}
+</section> -->
+
+{{/* cardview-custom.html  –  show recent “posts” only */}}
+
+{{/* 1 ‣ figure out how many pages to show (default 5) */}}
+{{ $limit := default 5 $.Site.Params.homepage.showRecentItems }}
+
+{{/* 2 ‣ build a list of pages that live in the “posts” section */}}
+{{ $pages := first $limit (where $.Site.RegularPages "Section" "posts") }}
+
+<section class="w-full grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+  {{ range $pages }}
+    {{ partial "article-link/card.html" . }}
+  {{ end }}
+</section>

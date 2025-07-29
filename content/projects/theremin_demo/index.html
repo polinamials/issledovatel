@@ -1,0 +1,364 @@
+---
+title: "Hand-Tracking Theremin Demo"
+layout: "default"
+date: "2025-07-25"
+draft: false
+summary: "A theremin you can play in the browser by tracking your hands through the webcam."
+---
+<script>
+  localStorage.setItem('theme-appearance','dark');
+  document.documentElement.classList.add('dark');
+</script>
+
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>MediaPipe HandLandmarker Task for web</title>
+  <!-- <link rel="stylesheet" href="/css/theremin.css"> -->
+   <style>
+
+      #single_header {      /* the “YYYY‑MM‑DD” line */
+        display: none !important;
+      }
+
+      /* 2) Disable scrolling on the page itself */
+      html, body {
+        overflow: hidden !important;
+        height: 100%;
+      }
+
+        /* hide the desktop “light ↔ dark” toggle */
+        #appearance-switcher {
+        display: none !important;
+        }
+
+        /* hide the mobile version */
+        #appearance-switcher-mobile {
+        display: none !important;
+        }
+
+        footer,
+        .footer {
+            display: none !important;
+        }
+        
+        #demos {
+        padding-bottom: 100vh;
+        }
+        #liveView {
+            position: fixed;
+            top: -16px;
+            left: 0;
+            z-index: -1;
+        }
+
+        /* Your 3D canvas */
+        #output_canvas {
+            position: relative;
+            display: block;
+            width: 100vw;   
+            height: 100vh;  
+            margin-top: 1rem;
+            margin-left: unset;
+            box-sizing: border-box;
+            
+        }
+
+        .control-panel {
+          position: fixed;
+          top: 1rem;           /* Tailwind’s top-4 */
+          left: 2rem;          /* Tailwind’s left-4 */
+          z-index: 50;         /* Tailwind’s z-50 */
+          width: 24rem; 
+          display: flex;       /* Tailwind’s flex */
+          flex-direction: column; /* Tailwind’s flex-col */
+        }
+
+        /* Tailwind’s space-y-2: 0.5rem between vertical siblings */
+        .control-panel > * + * {
+          margin-top: 0.5rem;
+        }
+        .control-panel details {
+          width: 100%;
+          max-width: 100%;
+          box-sizing: border-box;
+        }
+
+        /* 3) Wrap any long words/text inside the content div */
+        .control-panel details > div {
+          word-wrap: break-word;
+          font-size: 0.875rem;       /* ~14px for all text in the panel */
+          padding: 0.5rem 1rem;
+        }
+        .control-panel details > div p {
+          margin: 0.25rem 0;         /* only 0.25rem above & below each <p> */
+          line-height: 1.3;          /* optional: a bit tighter line‑height */
+        }
+
+        .control-panel details > summary {
+          font-size: 0.875rem;       /* ~14px */
+          padding: 0.5rem 1rem;      /* 0.5rem top/bottom, keep 1rem left/right */
+        }
+
+        #webcam {
+            
+            width: 160px;
+            height: 120px;
+            transform: scaleX(-1);
+            border-radius: 4px;
+            z-index: 10; 
+            background-color: #292524;
+            margin-bottom: 1.5rem !important;
+        }
+
+        #aboutButton {
+            position: relative;
+            width: 160px;  
+            height: 48px;
+            z-index: 11;
+            font-size: 0.875rem;
+        }
+        /* Toggle Container */
+        .toggle-switch {
+          position: relative;
+          display: inline-block;
+          width: 6rem;
+          height: 3rem;
+          margin: 0; padding: 0;
+        }
+
+        /* Hide real checkbox */
+        .toggle-switch input {
+          position: absolute;
+          opacity: 0;
+          width: 0; height: 0;
+        }
+
+        /* Label as clickable area */
+        .toggle-switch label {
+          display: block;
+          width: 100%; height: 100%;
+          cursor: pointer;
+          position: relative;
+        }
+
+        /* Track */
+        .toggle-switch .track {
+          position: absolute;
+          inset: 0;
+          background: #a5a6a9;         /* red when OFF */
+          border-radius: 999px;
+          transition: background 0.3s;
+        }
+
+        /* Thumb */
+        .toggle-switch .thumb {
+          position: absolute;
+          top: 0.125rem; left: 0.125rem;
+          width: 2.75rem; height: 2.75rem;
+          background: #f4f4f4;
+          border-radius: 999px;
+          transition: transform 0.3s;
+        }
+
+        /* Off‑state icon */
+        .toggle-switch .icon-off {
+          position: absolute;
+          top: 50%; left: 0.75rem;
+          width: 1.5rem; height: 1.5rem;
+          transform: translateY(-50%);
+          pointer-events: none;
+          opacity: 1;
+          color: #666666;
+          /* transition: opacity 0.3s; */
+        }
+
+        /* On‑state icon */
+        .toggle-switch .icon-on {
+          position: absolute;
+          top: 50%; right: 0.75rem;
+          width: 1.5rem; height: 1.5rem;
+          transform: translateY(-50%);
+          pointer-events: none;
+          color: #666666;
+          opacity: 1;
+          /* transition: opacity 0.3s; */
+        }
+
+        /* Checked (ON) styles */
+        .toggle-switch input:checked + label .track {
+          background: #fe9f97;
+        }
+        .toggle-switch input:checked + label .thumb {
+          transform: translateX(3rem);
+          background: #db2f27;
+        }
+        .toggle-switch input:checked + label .icon-off {
+          opacity: 1;
+          color: #db2f27;
+        }
+        .toggle-switch input:checked + label .icon-on {
+          opacity: 1;
+          color: #f4f4f4;
+        }
+
+        
+    </style>
+
+   <script type="importmap">
+        {
+            "imports": {
+                "three": "https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.module.js",
+                "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.152.2/examples/jsm/"
+            }
+        }
+    </script>
+    <script src=" https://cdn.jsdelivr.net/npm/tone@15.1.22/build/Tone.min.js "></script>
+
+
+</head>
+<link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+<script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js" crossorigin="anonymous"></script>
+
+<body>
+
+  <section id="demos">
+
+    
+
+    <div id="liveView" class="videoView">
+        <!-- Only the canvas stays in the normal flow -->
+        <canvas
+            id="output_canvas">
+        </canvas>
+
+         <!-- The video is now absolutely placed on top -->
+        
+        
+    </div>
+
+    <div
+      id="controlPanel" class="control-panel"
+    >
+      <video
+        id="webcam"
+        class="shadow-lg"
+        autoplay
+        playsinline>
+      </video>
+
+      <div class="toggle-switch">
+      <input type="checkbox" id="webcamToggle" autocomplete="off">
+      <label for="webcamToggle">
+        <span class="track"></span>
+        <span class="thumb"></span>
+
+        <svg class="icon icon-off" xmlns="http://www.w3.org/2000/svg"   viewBox="0 0 24 24"
+        fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" class="feather
+        feather-camera-off"><line x1="1" y1="1" x2="23" y2="23"></line><path
+        d="M21 21H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h3m3-3h6l2 3h4a2 2 0 0 1 2
+        2v9.34m-7.72-2.06a4 4 0 1 1-5.56-5.56"></path></svg>
+
+        <svg class="icon icon-on" xmlns="http://www.w3.org/2000/svg"   viewBox="0 0 24 24"
+        fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" class="feather
+        feather-camera"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0
+        1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13"
+        r="4"></circle></svg>
+      </label>
+    </div>
+                
+      <details class="w-64 bg-gray-800 text-white rounded shadow-md">
+        <summary
+          class="cursor-pointer px-4 py-2 font-semibold hover:bg-gray-700 rounded-t"
+        >
+          About
+        </summary>
+        <div class="px-4 py-2 space-y-1 bg-gray-900 rounded-b">
+          <p>The theremin was invented in 1928 by Leon Thermin. It is one of the
+          earliest electronic instruments, and one of the few instruments played
+          without physical contact. Click <a
+          href="../../posts/theremin/">here</a> to learn more
+          about this project. It is still a work in progress, so more features will be added.</p>
+        </div>
+      </details>
+
+
+      <details class="w-64 bg-gray-800 text-white rounded shadow-md">
+        <summary
+          class="cursor-pointer px-4 py-2 font-semibold hover:bg-gray-700 rounded-t"
+        >
+          Instructions
+        </summary>
+        <div class="px-4 py-2 space-y-1 bg-gray-900 rounded-b">
+          <p>1. Click the toggle above to enable your webcam.</p>
+          <p>2. Bring hand(s) into frame.</p>
+          <p>3. The hand nearest to the vertical antenna controls the pitch
+          (closer = higher pitch). The hand nearest to the horizontal anetanna
+          controls the volume (closer = lower volume). If you have one hand in
+          the frame, only the pitch will be controlled.</p>
+        </div>
+      </details>
+
+      <details class="w-64 bg-gray-800 text-white rounded shadow-md">
+        <summary
+          class="cursor-pointer px-4 py-2 font-semibold hover:bg-gray-700 rounded-t"
+        >
+          Credits
+        </summary>
+        <div class="px-4 py-2 space-y-1 bg-gray-900 rounded-b">
+          <p>"animal company - theremin" (<a
+          href="https://skfb.ly/puLnZ">https://skfb.ly/puLnZ</a>) by Romeo rios
+          vr is licensed under Creative Commons Attribution (<a
+          href="http://creativecommons.org/licenses/by/4.0/">http://creativecommons.org/licenses/by/4.0/</a>).
+          </p>
+          <p>Photo by <a
+          href="https://unsplash.com/@djouf?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Geoffroy
+          Berlioz</a> on <a
+          href="https://unsplash.com/photos/brown-and-black-audio-mixer-Wq8iKPNPv-w?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+       </p>
+          <p>Icon by <a class="link_pro"
+          href="https://freeicons.io/business-and-online-icons/camera-icon-icon">Raj
+          Dev</a> on <a href="https://freeicons.io">freeicons.io</a></p>
+          <p>Colors: <a href="https://fabianburghardt.de/swisscolors/">swiss style color picker</a></p>
+        </div>
+      </details>
+
+
+
+    </div>
+
+    
+
+
+
+        
+
+    
+  </section>
+  
+<!-- partial -->
+
+  <!-- <script type="module" src="/js/theremin.js"></script> -->
+   <script type="module" src="/js/theremin.js?v=2"></script>
+   <script>
+  // Accordion‑style: only one <details> open at once
+  document.querySelectorAll('.control-panel details').forEach((det) => {
+    det.addEventListener('toggle', () => {
+      if (det.open) {
+        document.querySelectorAll('.control-panel details').forEach((other) => {
+          if (other !== det) other.open = false;
+        });
+      }
+    });
+  });
+</script>
+
+
+</body>
+
+</html>

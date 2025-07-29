@@ -1,0 +1,26 @@
+{{/* ------------ CONFIG ------------ */}}
+{{ $recentArticles   := default 5 .Site.Params.homepage.showRecentItems }}
+{{ $showMoreLinkDest := default "/posts/" .Site.Params.homepage.showMoreLinkDest }}
+
+<h2 class="mt-8 text-2xl font-extrabold mb-10">
+  Recent Blog Posts
+</h2>
+
+<div id="CardViewProse" class="h-full">
+  {{/* pass both the context (.) and the limit to the partial */}}
+  {{ partial "home/cardview-custom.html" . }}
+</div>
+
+{{/* ------------ OPTIONAL “SHOW MORE” BUTTON ------------ */}}
+{{ if .Site.Params.homepage.showMoreLink | default false }}
+  <div class="mt-10 flex justify-center">
+    <a href="{{ $showMoreLinkDest }}">
+      <button
+        class="bg-transparent hover:text-primary-500 prose dark:prose-invert
+               font-semibold hover:text-white py-2 px-4 border border-primary-500
+               hover:border-transparent rounded">
+        {{ i18n "recent.show_more" | markdownify }}
+      </button>
+    </a>
+  </div>
+{{ end }}

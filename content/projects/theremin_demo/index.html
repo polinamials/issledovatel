@@ -14,9 +14,11 @@ summary: "A theremin you can play in the browser by tracking your hands through 
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>MediaPipe HandLandmarker Task for web</title>
-  <!-- <link rel="stylesheet" href="/css/theremin.css"> -->
    <style>
+
+      .invisible {
+      opacity: 0.2;
+      }
 
       #single_header {      /* the “YYYY‑MM‑DD” line */
         display: none !important;
@@ -28,7 +30,7 @@ summary: "A theremin you can play in the browser by tracking your hands through 
         height: 100%;
       }
 
-        /* hide the desktop “light ↔ dark” toggle */
+        /* hide the desktop “light - dark” toggle */
         #appearance-switcher {
         display: none !important;
         }
@@ -171,7 +173,6 @@ summary: "A theremin you can play in the browser by tracking your hands through 
           pointer-events: none;
           opacity: 1;
           color: #666666;
-          /* transition: opacity 0.3s; */
         }
 
         /* On‑state icon */
@@ -183,7 +184,6 @@ summary: "A theremin you can play in the browser by tracking your hands through 
           pointer-events: none;
           color: #666666;
           opacity: 1;
-          /* transition: opacity 0.3s; */
         }
 
         /* Checked (ON) styles */
@@ -225,19 +225,14 @@ summary: "A theremin you can play in the browser by tracking your hands through 
 
 <body>
 
-  <section id="demos">
+  <section id="demos", class="invisible">
 
     
 
     <div id="liveView" class="videoView">
-        <!-- Only the canvas stays in the normal flow -->
         <canvas
             id="output_canvas">
         </canvas>
-
-         <!-- The video is now absolutely placed on top -->
-        
-        
     </div>
 
     <div
@@ -272,29 +267,29 @@ summary: "A theremin you can play in the browser by tracking your hands through 
       </label>
     </div>
                 
-      <details class="w-64 bg-gray-800 text-white rounded shadow-md">
+      <details class="w-64 bg-transparent text-white rounded shadow-md">
         <summary
-          class="cursor-pointer px-4 py-2 font-semibold hover:bg-gray-700 rounded-t"
+          class="cursor-pointer px-4 py-2 font-semibold rounded-t"
         >
           About
         </summary>
-        <div class="px-4 py-2 space-y-1 bg-gray-900 rounded-b">
+        <div class="px-4 py-2 space-y-1 bg-transparent rounded-b">
           <p>The theremin was invented in 1928 by Leon Thermin. It is one of the
           earliest electronic instruments, and one of the few instruments played
           without physical contact. Click <a
           href="../../posts/theremin/">here</a> to learn more
-          about this project. It is still a work in progress, so more features will be added.</p>
+          about this project.</p>
         </div>
       </details>
 
 
-      <details class="w-64 bg-gray-800 text-white rounded shadow-md">
+      <details class="w-64 bg-transparent text-white rounded shadow-md">
         <summary
-          class="cursor-pointer px-4 py-2 font-semibold hover:bg-gray-700 rounded-t"
+          class="cursor-pointer px-4 py-2 font-semibold rounded-t"
         >
           Instructions
         </summary>
-        <div class="px-4 py-2 space-y-1 bg-gray-900 rounded-b">
+        <div class="px-4 py-2 space-y-1 bg-transparent rounded-b">
           <p>1. Click the toggle above to enable your webcam.</p>
           <p>2. Bring hand(s) into frame.</p>
           <p>3. The hand nearest to the vertical antenna controls the pitch
@@ -304,13 +299,13 @@ summary: "A theremin you can play in the browser by tracking your hands through 
         </div>
       </details>
 
-      <details class="w-64 bg-gray-800 text-white rounded shadow-md">
+      <details class="w-64 bg-transparent text-white rounded shadow-md">
         <summary
-          class="cursor-pointer px-4 py-2 font-semibold hover:bg-gray-700 rounded-t"
+          class="cursor-pointer px-4 py-2 font-semibold rounded-t"
         >
           Credits
         </summary>
-        <div class="px-4 py-2 space-y-1 bg-gray-900 rounded-b">
+        <div class="px-4 py-2 space-y-1 bg-transparent rounded-b">
           <p>"animal company - theremin" (<a
           href="https://skfb.ly/puLnZ">https://skfb.ly/puLnZ</a>) by Romeo rios
           vr is licensed under Creative Commons Attribution (<a

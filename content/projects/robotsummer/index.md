@@ -2,7 +2,7 @@
 title: "Treasure-Collecting Robot Competition"
 date: 2025-07-15
 draft: false
-tags: ["cv","webgl"]
+tags: ["cv","embedded","Onshape"]
 summary: "Built an autonomous differential‑drive robot built in a six‑week UBC ENPH 253 course. It uses IR, ultrasonic, and magnetic sensors with PID control to navigate an obstacle course and collect objects with a four‑DOF claw."
 ---
 

@@ -7,7 +7,47 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2025 Polina Shopina</copyright>
-    <lastBuildDate>Tue, 15 Jul 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 13 Dec 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>CV</title>
+      <link>http://localhost:1313/tags/cv/</link>
+      <pubDate>Sat, 13 Dec 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/tags/cv/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>ML</title>
+      <link>http://localhost:1313/tags/ml/</link>
+      <pubDate>Sat, 13 Dec 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/tags/ml/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>3D</title>
+      <link>http://localhost:1313/tags/3d/</link>
+      <pubDate>Sat, 13 Sep 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/tags/3d/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>JavaScript</title>
+      <link>http://localhost:1313/tags/javascript/</link>
+      <pubDate>Sat, 13 Sep 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/tags/javascript/</guid>
+      <description></description>
+      
+    </item>
     
     <item>
       <title>Agriculture</title>
@@ -40,31 +80,11 @@
     </item>
     
     <item>
-      <title>CAD</title>
-      <link>http://localhost:1313/tags/cad/</link>
-      <pubDate>Tue, 15 Jul 2025 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/tags/cad/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
       <title>Co-Op</title>
       <link>http://localhost:1313/tags/co-op/</link>
       <pubDate>Tue, 15 Jul 2025 00:00:00 +0000</pubDate>
       
       <guid>http://localhost:1313/tags/co-op/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Cv</title>
-      <link>http://localhost:1313/tags/cv/</link>
-      <pubDate>Tue, 15 Jul 2025 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/tags/cv/</guid>
       <description></description>
       
     </item>
@@ -80,6 +100,16 @@
     </item>
     
     <item>
+      <title>Embedded</title>
+      <link>http://localhost:1313/tags/embedded/</link>
+      <pubDate>Tue, 15 Jul 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/tags/embedded/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
       <title>GUI</title>
       <link>http://localhost:1313/tags/gui/</link>
       <pubDate>Tue, 15 Jul 2025 00:00:00 +0000</pubDate>
@@ -90,31 +120,11 @@
     </item>
     
     <item>
-      <title>Internship</title>
-      <link>http://localhost:1313/tags/internship/</link>
-      <pubDate>Tue, 15 Jul 2025 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/tags/internship/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
       <title>Mechanical</title>
       <link>http://localhost:1313/tags/mechanical/</link>
       <pubDate>Tue, 15 Jul 2025 00:00:00 +0000</pubDate>
       
       <guid>http://localhost:1313/tags/mechanical/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>ML</title>
-      <link>http://localhost:1313/tags/ml/</link>
-      <pubDate>Tue, 15 Jul 2025 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/tags/ml/</guid>
       <description></description>
       
     </item>
@@ -180,7 +190,7 @@
     </item>
     
     <item>
-      <title>Solidworks</title>
+      <title>SolidWorks</title>
       <link>http://localhost:1313/tags/solidworks/</link>
       <pubDate>Tue, 15 Jul 2025 00:00:00 +0000</pubDate>
       
@@ -195,16 +205,6 @@
       <pubDate>Tue, 15 Jul 2025 00:00:00 +0000</pubDate>
       
       <guid>http://localhost:1313/tags/testing/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Webgl</title>
-      <link>http://localhost:1313/tags/webgl/</link>
-      <pubDate>Tue, 15 Jul 2025 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/tags/webgl/</guid>
       <description></description>
       
     </item>

@@ -2,7 +2,7 @@
 title: "TRIUMF Internship"
 date: 2025-07-15
 draft: false
-tags: ["Qt","GUI", "Cython", "Prototyping", "Physics"]
+tags: ["Co-op","Qt","GUI", "Cython", "Prototyping", "Physics"]
 summary: "Improved an automated Mu‑metal‑shielded gradiometer and wrote Python scripts to control multimeters and oscilloscopes for fluxgate measurements."
 ---
 

@@ -1,12 +1,33 @@
-
 {{ partial "home/background.html" . }}
 
-<h2 class="mt-8 text-2xl font-extrabold mb-10">Projects</h2>
-
-<section>
-  {{ partial "home/projects.html" . }}
+{{/* Recent Blog Posts */}}
+<h2 class="mt-8 text-2xl font-extrabold mb-10">Recent Posts</h2>
+<section class="w-full grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+  {{ range first 5 (where .Site.RegularPages "Section" "posts") }}
+    {{ partial "article-link/card.html" . }}
+  {{ end }}
 </section>
 
-<section>
-  {{ partial "home/recent-articles-custom.html" . }}
-</section> 
+<div class="mt-10 flex justify-center">
+  <a href="/posts/">
+    <button class="bg-transparent hover:text-primary-500 font-semibold py-2 px-4 border border-primary-500 rounded">
+      {{ i18n "recent.show_more" | markdownify }}
+    </button>
+  </a>
+</div>
+
+{{/* Projects */}}
+<h2 class="mt-16 text-2xl font-extrabold mb-10">Projects</h2>
+<section class="w-full grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+  {{ range first 3 (where .Site.RegularPages "Section" "projects") }}
+    {{ partial "article-link/card.html" . }}
+  {{ end }}
+</section>
+
+<div class="mt-10 flex justify-center">
+  <a href="/projects/">
+    <button class="bg-transparent hover:text-primary-500 font-semibold py-2 px-4 border border-primary-500 rounded">
+      View all projects
+    </button>
+  </a>
+</div>

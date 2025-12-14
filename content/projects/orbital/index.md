@@ -2,7 +2,7 @@
 title: "Orbital Research Internship"
 date: 2025-07-15
 draft: false
-tags: ["co-op","internship", "mechanical", "solidworks", "CAD", "Prototyping", "Testing"]
+tags: ["co-op", "mechanical", "solidWorks", "Prototyping", "Testing"]
 summary: "Designed RF up/down converter components in SolidWorks, including machine‑shop drawings with GD&T. Fabricated customer‑specific mechanical modifications on time. Built and automated a vibration‑testing jig."
 ---
 

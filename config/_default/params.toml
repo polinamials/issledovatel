@@ -5,7 +5,7 @@
 # Refer to the theme docs for more details about each of these parameters.
 # https://blowfish.page/docs/configuration/#theme-parameters
 
-colorScheme = "avocado"
+colorScheme = "congo"
 defaultAppearance = "dark" # valid options: light or dark
 autoSwitchAppearance = true
 
@@ -14,7 +14,7 @@ enableCodeCopy = false
 
 replyByEmail = false
 
-mainSections = [ "posts", "projects"]
+mainSections = [ "posts"]
 # robots = ""
 
 disableImageOptimization = false
@@ -47,13 +47,13 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
 
 [homepage]
   layout = "custom" # valid options: page, profile, hero, card, background, custom
-  homepageImage = "img/greenbg.jpg" # used in: hero, and card
-  showRecent = false
-  showRecentItems = 5
-  showMoreLink = true
-  showMoreLinkDest = "/posts/"
-  cardView = true
-  cardViewScreenWidth = false
+  # homepageImage = "img/greenbg.jpg" # used in: hero, and card
+  # showRecent = false
+  # showRecentItems = 5
+  # showMoreLink = true
+  # showMoreLinkDest = "/posts/"
+  # cardView = false
+  # cardViewScreenWidth = true
   layoutBackgroundBlur = true # only used when layout equals background
   disableHeroImageFilter = false # only used when layout equals hero
 
@@ -82,7 +82,7 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
   showTableOfContents = true
   # showRelatedContent = false
   # relatedContentLimit = 3
-  showTaxonomies = false # use showTaxonomies OR showCategoryOnly, not both
+  showTaxonomies = true # use showTaxonomies OR showCategoryOnly, not both
   showCategoryOnly = false # use showTaxonomies OR showCategoryOnly, not both
   showAuthorsBadges = false
   showWordCount = false

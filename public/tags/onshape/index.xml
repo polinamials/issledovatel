@@ -19,5 +19,15 @@
       <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/projects/interceptor/featured.jpg" />
     </item>
     
+    <item>
+      <title>Treasure-Collecting Robot Competition</title>
+      <link>http://localhost:1313/projects/robotsummer/</link>
+      <pubDate>Tue, 15 Jul 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/projects/robotsummer/</guid>
+      <description>Built an autonomous differential‑drive robot built in a six‑week UBC ENPH 253 course. It uses IR, ultrasonic, and magnetic sensors with PID control to navigate an obstacle course and collect objects with a four‑DOF claw.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/projects/robotsummer/featured.jpg" />
+    </item>
+    
   </channel>
 </rss>

@@ -3,6 +3,7 @@ title: "Hand-Tracking Theremin Browser Game"
 date: 2025-09-13
 draft: false
 summary: A musical instrument you can play in your browser.
+tags: ["JavaScript", "3D", "CV"]
 ---
 
 I recently came across the [MediaPipe Hand Landmarker](https://ai.google.dev/edge/mediapipe/solutions/vision/hand_landmarker#configurations_options) computer vision model by Google AI. This is a hand-detection model that detects 21 key points of a hand in an image, and it is fast enough for real-time tracking.

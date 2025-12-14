@@ -19,5 +19,15 @@
       <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/projects/orbital/featured.jpg" />
     </item>
     
+    <item>
+      <title>TRIUMF Internship</title>
+      <link>http://localhost:1313/projects/triumf/</link>
+      <pubDate>Tue, 15 Jul 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/projects/triumf/</guid>
+      <description>Improved an automated Mu‑metal‑shielded gradiometer and wrote Python scripts to control multimeters and oscilloscopes for fluxgate measurements.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/projects/triumf/featured.jpg" />
+    </item>
+    
   </channel>
 </rss>

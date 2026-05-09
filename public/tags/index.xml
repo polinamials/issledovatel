@@ -6,13 +6,13 @@
     <description>Recent content in Tags on Polina Shopina</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>© 2025 Polina Shopina</copyright>
-    <lastBuildDate>Sat, 13 Dec 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>© 2026 Polina Shopina</copyright>
+    <lastBuildDate>Tue, 24 Mar 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>CV</title>
       <link>http://localhost:1313/tags/cv/</link>
-      <pubDate>Sat, 13 Dec 2025 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 24 Mar 2026 00:00:00 +0000</pubDate>
       
       <guid>http://localhost:1313/tags/cv/</guid>
       <description></description>
@@ -22,7 +22,7 @@
     <item>
       <title>ML</title>
       <link>http://localhost:1313/tags/ml/</link>
-      <pubDate>Sat, 13 Dec 2025 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 24 Mar 2026 00:00:00 +0000</pubDate>
       
       <guid>http://localhost:1313/tags/ml/</guid>
       <description></description>
@@ -50,26 +50,6 @@
     </item>
     
     <item>
-      <title>Agriculture</title>
-      <link>http://localhost:1313/tags/agriculture/</link>
-      <pubDate>Tue, 15 Jul 2025 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/tags/agriculture/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Automation</title>
-      <link>http://localhost:1313/tags/automation/</link>
-      <pubDate>Tue, 15 Jul 2025 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/tags/automation/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
       <title>C&#43;&#43;</title>
       <link>http://localhost:1313/tags/c&#43;&#43;/</link>
       <pubDate>Tue, 15 Jul 2025 00:00:00 +0000</pubDate>
@@ -80,51 +60,11 @@
     </item>
     
     <item>
-      <title>Co-Op</title>
-      <link>http://localhost:1313/tags/co-op/</link>
-      <pubDate>Tue, 15 Jul 2025 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/tags/co-op/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Cython</title>
-      <link>http://localhost:1313/tags/cython/</link>
-      <pubDate>Tue, 15 Jul 2025 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/tags/cython/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
       <title>Embedded</title>
       <link>http://localhost:1313/tags/embedded/</link>
       <pubDate>Tue, 15 Jul 2025 00:00:00 +0000</pubDate>
       
       <guid>http://localhost:1313/tags/embedded/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>GUI</title>
-      <link>http://localhost:1313/tags/gui/</link>
-      <pubDate>Tue, 15 Jul 2025 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/tags/gui/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Mechanical</title>
-      <link>http://localhost:1313/tags/mechanical/</link>
-      <pubDate>Tue, 15 Jul 2025 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/tags/mechanical/</guid>
       <description></description>
       
     </item>
@@ -150,26 +90,6 @@
     </item>
     
     <item>
-      <title>Physics</title>
-      <link>http://localhost:1313/tags/physics/</link>
-      <pubDate>Tue, 15 Jul 2025 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/tags/physics/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Prototyping</title>
-      <link>http://localhost:1313/tags/prototyping/</link>
-      <pubDate>Tue, 15 Jul 2025 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/tags/prototyping/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
       <title>Python</title>
       <link>http://localhost:1313/tags/python/</link>
       <pubDate>Tue, 15 Jul 2025 00:00:00 +0000</pubDate>
@@ -185,26 +105,6 @@
       <pubDate>Tue, 15 Jul 2025 00:00:00 +0000</pubDate>
       
       <guid>http://localhost:1313/tags/qt/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>SolidWorks</title>
-      <link>http://localhost:1313/tags/solidworks/</link>
-      <pubDate>Tue, 15 Jul 2025 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/tags/solidworks/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Testing</title>
-      <link>http://localhost:1313/tags/testing/</link>
-      <pubDate>Tue, 15 Jul 2025 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/tags/testing/</guid>
       <description></description>
       
     </item>

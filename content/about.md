@@ -4,4 +4,4 @@ draft = false
 title = 'About Me'
 +++
 
-Hi! I’m Polina, a software engineer at Emergent Vision Technologies. My interests include robotics, aerospace engineering, physics, and machine learning. I’ve worked on a number of cool projects, which you can check out [here](/projects/). Besides engineering, I enjoy hiking, reading and film photography.
+Hi! I’m Polina, a software engineer at Emergent Vision Technologies. My interests include AI, computer vision and machine learning. On this website, I share my personal projects, cool tech things I learn about and anything else that comes to mind.

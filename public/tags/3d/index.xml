@@ -6,7 +6,7 @@
     <description>Recent content in 3D on Polina Shopina</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>© 2025 Polina Shopina</copyright>
+    <copyright>© 2026 Polina Shopina</copyright>
     <lastBuildDate>Sat, 13 Sep 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/3d/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
@@ -21,12 +21,12 @@
     
     <item>
       <title>Hand-Tracking Theremin Demo</title>
-      <link>http://localhost:1313/projects/theremin_demo/</link>
+      <link>http://localhost:1313/posts/theremin_demo/</link>
       <pubDate>Fri, 25 Jul 2025 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/projects/theremin_demo/</guid>
+      <guid>http://localhost:1313/posts/theremin_demo/</guid>
       <description>A theremin you can play in the browser by tracking your hands through the webcam.</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/projects/theremin_demo/featured.png" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/theremin_demo/featured.png" />
     </item>
     
   </channel>

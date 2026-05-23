@@ -16,7 +16,7 @@
       
       <guid>http://localhost:1313/posts/interceptor/</guid>
       <description>Built an automated ballistic interceptor that used a high-speed stereo vision system and OpenCV to predict 3D ball trajectories for interception with a projectile from a stepper‑driven BB launcher.</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/interceptor/featured.jpg" />
+      
     </item>
     
   </channel>

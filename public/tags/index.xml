@@ -129,25 +129,5 @@
       
     </item>
     
-    <item>
-      <title>AI</title>
-      <link>http://localhost:1313/tags/ai/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/tags/ai/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Thoughts</title>
-      <link>http://localhost:1313/tags/thoughts/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/tags/thoughts/</guid>
-      <description></description>
-      
-    </item>
-    
   </channel>
 </rss>

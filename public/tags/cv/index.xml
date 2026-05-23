@@ -56,7 +56,7 @@
       
       <guid>http://localhost:1313/posts/robotsummer/</guid>
       <description>Built an autonomous differential‑drive robot built in a six‑week UBC ENPH 253 course. It uses IR, ultrasonic, and magnetic sensors with PID control to navigate an obstacle course and collect objects with a four‑DOF claw.</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/robotsummer/featured.jpg" />
+      
     </item>
     
     <item>
@@ -66,7 +66,7 @@
       
       <guid>http://localhost:1313/posts/gazebo/</guid>
       <description>Trained an agent in Gazebo to autonomously navigate a 3D obstacle course (imitation learning) and correctly read random license plates (CNN) while avoiding collisions.</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/gazebo/featured.png" />
+      
     </item>
     
   </channel>

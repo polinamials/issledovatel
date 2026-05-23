@@ -16,7 +16,7 @@
       
       <guid>http://localhost:1313/posts/gazebo/</guid>
       <description>Trained an agent in Gazebo to autonomously navigate a 3D obstacle course (imitation learning) and correctly read random license plates (CNN) while avoiding collisions.</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/gazebo/featured.png" />
+      
     </item>
     
   </channel>

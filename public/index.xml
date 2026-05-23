@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Polina Shopina</title>
+    <title>issledovatel</title>
     <link>http://localhost:1313/</link>
-    <description>Recent content on Polina Shopina</description>
+    <description>Recent content on issledovatel</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2026 Polina Shopina</copyright>
@@ -16,7 +16,7 @@
       
       <guid>http://localhost:1313/posts/pe500/</guid>
       <description>My solution to problem #500 from Project Euler</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/pe500/featured.png" />
+      
     </item>
     
     <item>
@@ -26,7 +26,7 @@
       
       <guid>http://localhost:1313/posts/quantization/</guid>
       <description>Learn the basics of neural network quantization and visualize its effects on the MobileNetV2.</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/quantization/featured.png" />
+      
     </item>
     
     <item>
@@ -36,7 +36,7 @@
       
       <guid>http://localhost:1313/posts/emergent_demo/</guid>
       <description>Unsupervised anomaly detection demo for inVISION Days.</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/emergent_demo/featured.png" />
+      
     </item>
     
     <item>
@@ -45,7 +45,7 @@
       <pubDate>Sat, 13 Sep 2025 00:00:00 +0000</pubDate>
       
       <guid>http://localhost:1313/about/</guid>
-      <description>&lt;p&gt;Hi! I’m Polina, a software engineer at Emergent Vision Technologies. My interests include AI, computer vision and machine learning. On this website, I share my personal projects, cool tech things I learn about and anything else that comes to mind.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Under construction&amp;hellip;&lt;/p&gt;</description>
       
     </item>
     
@@ -56,7 +56,7 @@
       
       <guid>http://localhost:1313/posts/theremin/</guid>
       <description>A musical instrument you can play in your browser.</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/theremin/featured.png" />
+      
     </item>
     
     <item>
@@ -66,18 +66,6 @@
       
       <guid>http://localhost:1313/posts/theremin_demo/</guid>
       <description>A theremin you can play in the browser by tracking your hands through the webcam.</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/theremin_demo/featured.png" />
-    </item>
-    
-    <item>
-      <title>Resume</title>
-      <link>http://localhost:1313/resume/</link>
-      <pubDate>Wed, 16 Jul 2025 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/resume/</guid>
-      <description>&lt;object data=&#34;resume.pdf&#34; type=&#34;application/pdf&#34; width=&#34;700px&#34; height=&#34;700px&#34;&gt;
-    &lt;embed src=&#34;resume.pdf&#34;&gt;
-        &lt;p&gt;This browser does not support PDFs. Please download the PDF to view it: &lt;a href=&#34;resume.pdf&#34;&gt;Download PDF&lt;/a&gt;.&lt;/p&gt;</description>
       
     </item>
     
@@ -88,7 +76,7 @@
       
       <guid>http://localhost:1313/posts/interceptor/</guid>
       <description>Built an automated ballistic interceptor that used a high-speed stereo vision system and OpenCV to predict 3D ball trajectories for interception with a projectile from a stepper‑driven BB launcher.</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/interceptor/featured.jpg" />
+      
     </item>
     
     <item>
@@ -98,7 +86,7 @@
       
       <guid>http://localhost:1313/posts/robotsummer/</guid>
       <description>Built an autonomous differential‑drive robot built in a six‑week UBC ENPH 253 course. It uses IR, ultrasonic, and magnetic sensors with PID control to navigate an obstacle course and collect objects with a four‑DOF claw.</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/robotsummer/featured.jpg" />
+      
     </item>
     
     <item>
@@ -108,7 +96,7 @@
       
       <guid>http://localhost:1313/posts/gazebo/</guid>
       <description>Trained an agent in Gazebo to autonomously navigate a 3D obstacle course (imitation learning) and correctly read random license plates (CNN) while avoiding collisions.</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/gazebo/featured.png" />
+      
     </item>
     
   </channel>

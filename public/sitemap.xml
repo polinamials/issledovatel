@@ -4,19 +4,25 @@
 
   <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2026-05-17T00:00:00+00:00</lastmod>
+    <lastmod>2026-05-21T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/posts/ai-paranoia/</loc>
+    <lastmod>2026-05-21T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2026-05-17T00:00:00+00:00</lastmod>
+    <lastmod>2026-05-21T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>http://localhost:1313/posts/pe500/</loc>
-    <lastmod>2026-05-17T00:00:00+00:00</lastmod>
+    <lastmod>2026-05-20T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
@@ -47,12 +53,6 @@
   <url>
     <loc>http://localhost:1313/posts/theremin_demo/</loc>
     <lastmod>2025-07-25T00:00:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://localhost:1313/resume/</loc>
-    <lastmod>2025-07-16T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>

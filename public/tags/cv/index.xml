@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>CV on Polina Shopina</title>
+    <title>CV on issledovatel</title>
     <link>http://localhost:1313/tags/cv/</link>
-    <description>Recent content in CV on Polina Shopina</description>
+    <description>Recent content in CV on issledovatel</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2026 Polina Shopina</copyright>
@@ -16,7 +16,7 @@
       
       <guid>http://localhost:1313/posts/quantization/</guid>
       <description>Learn the basics of neural network quantization and visualize its effects on the MobileNetV2.</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/quantization/featured.png" />
+      
     </item>
     
     <item>
@@ -26,7 +26,7 @@
       
       <guid>http://localhost:1313/posts/emergent_demo/</guid>
       <description>Unsupervised anomaly detection demo for inVISION Days.</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/emergent_demo/featured.png" />
+      
     </item>
     
     <item>
@@ -36,7 +36,7 @@
       
       <guid>http://localhost:1313/posts/theremin/</guid>
       <description>A musical instrument you can play in your browser.</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/theremin/featured.png" />
+      
     </item>
     
     <item>
@@ -46,7 +46,7 @@
       
       <guid>http://localhost:1313/posts/theremin_demo/</guid>
       <description>A theremin you can play in the browser by tracking your hands through the webcam.</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/theremin_demo/featured.png" />
+      
     </item>
     
     <item>

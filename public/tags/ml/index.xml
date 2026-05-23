@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>ML on Polina Shopina</title>
+    <title>ML on issledovatel</title>
     <link>http://localhost:1313/tags/ml/</link>
-    <description>Recent content in ML on Polina Shopina</description>
+    <description>Recent content in ML on issledovatel</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2026 Polina Shopina</copyright>
@@ -16,7 +16,7 @@
       
       <guid>http://localhost:1313/posts/quantization/</guid>
       <description>Learn the basics of neural network quantization and visualize its effects on the MobileNetV2.</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/quantization/featured.png" />
+      
     </item>
     
     <item>
@@ -26,7 +26,7 @@
       
       <guid>http://localhost:1313/posts/emergent_demo/</guid>
       <description>Unsupervised anomaly detection demo for inVISION Days.</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/emergent_demo/featured.png" />
+      
     </item>
     
     <item>

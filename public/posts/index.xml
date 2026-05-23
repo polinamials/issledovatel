@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Polina Shopina</title>
+    <title>Posts on issledovatel</title>
     <link>http://localhost:1313/posts/</link>
-    <description>Recent content in Posts on Polina Shopina</description>
+    <description>Recent content in Posts on issledovatel</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2026 Polina Shopina</copyright>
@@ -16,7 +16,7 @@
       
       <guid>http://localhost:1313/posts/pe500/</guid>
       <description>My solution to problem #500 from Project Euler</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/pe500/featured.png" />
+      
     </item>
     
     <item>
@@ -26,7 +26,7 @@
       
       <guid>http://localhost:1313/posts/quantization/</guid>
       <description>Learn the basics of neural network quantization and visualize its effects on the MobileNetV2.</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/quantization/featured.png" />
+      
     </item>
     
     <item>
@@ -36,7 +36,7 @@
       
       <guid>http://localhost:1313/posts/emergent_demo/</guid>
       <description>Unsupervised anomaly detection demo for inVISION Days.</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/emergent_demo/featured.png" />
+      
     </item>
     
     <item>
@@ -46,7 +46,7 @@
       
       <guid>http://localhost:1313/posts/theremin/</guid>
       <description>A musical instrument you can play in your browser.</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/theremin/featured.png" />
+      
     </item>
     
     <item>
@@ -56,7 +56,7 @@
       
       <guid>http://localhost:1313/posts/theremin_demo/</guid>
       <description>A theremin you can play in the browser by tracking your hands through the webcam.</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/theremin_demo/featured.png" />
+      
     </item>
     
     <item>
@@ -66,7 +66,7 @@
       
       <guid>http://localhost:1313/posts/interceptor/</guid>
       <description>Built an automated ballistic interceptor that used a high-speed stereo vision system and OpenCV to predict 3D ball trajectories for interception with a projectile from a stepper‑driven BB launcher.</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/interceptor/featured.jpg" />
+      
     </item>
     
     <item>
@@ -76,7 +76,7 @@
       
       <guid>http://localhost:1313/posts/robotsummer/</guid>
       <description>Built an autonomous differential‑drive robot built in a six‑week UBC ENPH 253 course. It uses IR, ultrasonic, and magnetic sensors with PID control to navigate an obstacle course and collect objects with a four‑DOF claw.</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/robotsummer/featured.jpg" />
+      
     </item>
     
     <item>
@@ -86,7 +86,7 @@
       
       <guid>http://localhost:1313/posts/gazebo/</guid>
       <description>Trained an agent in Gazebo to autonomously navigate a 3D obstacle course (imitation learning) and correctly read random license plates (CNN) while avoiding collisions.</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/gazebo/featured.png" />
+      
     </item>
     
   </channel>

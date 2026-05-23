@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>C&#43;&#43; on Polina Shopina</title>
+    <title>C&#43;&#43; on issledovatel</title>
     <link>http://localhost:1313/tags/c&#43;&#43;/</link>
-    <description>Recent content in C&#43;&#43; on Polina Shopina</description>
+    <description>Recent content in C&#43;&#43; on issledovatel</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2026 Polina Shopina</copyright>
@@ -16,7 +16,7 @@
       
       <guid>http://localhost:1313/posts/interceptor/</guid>
       <description>Built an automated ballistic interceptor that used a high-speed stereo vision system and OpenCV to predict 3D ball trajectories for interception with a projectile from a stepper‑driven BB launcher.</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/interceptor/featured.jpg" />
+      
     </item>
     
   </channel>

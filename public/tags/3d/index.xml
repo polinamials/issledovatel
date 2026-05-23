@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>3D on Polina Shopina</title>
+    <title>3D on issledovatel</title>
     <link>http://localhost:1313/tags/3d/</link>
-    <description>Recent content in 3D on Polina Shopina</description>
+    <description>Recent content in 3D on issledovatel</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2026 Polina Shopina</copyright>
@@ -16,7 +16,7 @@
       
       <guid>http://localhost:1313/posts/theremin/</guid>
       <description>A musical instrument you can play in your browser.</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/theremin/featured.png" />
+      
     </item>
     
     <item>
@@ -26,7 +26,7 @@
       
       <guid>http://localhost:1313/posts/theremin_demo/</guid>
       <description>A theremin you can play in the browser by tracking your hands through the webcam.</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/theremin_demo/featured.png" />
+      
     </item>
     
   </channel>

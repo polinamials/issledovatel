@@ -1,4 +1,4 @@
 baseURL = 'https://issledova.tel/'
-languageCode = 'en-us'
+locale = 'en-us'
 title = 'My New Hugo Site'
 theme = "blowfish"

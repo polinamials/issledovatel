@@ -72,3 +72,10 @@ enableEmoji = true
 [caches]
   [caches.images]
     dir = ':cacheDir/images'
+    
+  
+[security]
+  allowContent = ['^text/html$', '^text/markdown$']
+
+[security.exec]
+  allow = ['^(dart-)?sass(-embedded)?$', '^go$', '^git$', '^node$', '^postcss$', '^tailwindcss$']

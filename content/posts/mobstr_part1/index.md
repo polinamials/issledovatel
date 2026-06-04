@@ -68,7 +68,7 @@ m_encoder = AMediaCodec_createEncoderByType("video/avc");
 
 AMediaFormat* format = AMediaFormat_new();
 AMediaFormat_setString(format, AMEDIAFORMAT_KEY_MIME, "video/avc");
-// ... Set more format parameters here
+// I commented out the remaining parameters for brevity
 
 media_status_t status = AMediaCodec_configure(m_encoder, format, nullptr, nullptr, AMEDIACODEC_CONFIGURE_FLAG_ENCODE);
 AMediaFormat_delete(format);

@@ -252,7 +252,7 @@
     "keywords": ["Mobstr"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "1374"
+    "wordCount": "1376"
   }]
   </script>
 
@@ -1034,7 +1034,7 @@
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="n">AMediaFormat</span><span class="o">*</span> <span class="n">format</span> <span class="o">=</span> <span class="n">AMediaFormat_new</span><span class="p">();</span>
 </span></span><span class="line"><span class="cl"><span class="n">AMediaFormat_setString</span><span class="p">(</span><span class="n">format</span><span class="p">,</span> <span class="n">AMEDIAFORMAT_KEY_MIME</span><span class="p">,</span> <span class="s">&#34;video/avc&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="c1">// ... Set more format parameters here
+</span></span><span class="line"><span class="cl"><span class="c1">// I commented out the remaining parameters for brevity
 </span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="n">media_status_t</span> <span class="n">status</span> <span class="o">=</span> <span class="n">AMediaCodec_configure</span><span class="p">(</span><span class="n">m_encoder</span><span class="p">,</span> <span class="n">format</span><span class="p">,</span> <span class="k">nullptr</span><span class="p">,</span> <span class="k">nullptr</span><span class="p">,</span> <span class="n">AMEDIACODEC_CONFIGURE_FLAG_ENCODE</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="n">AMediaFormat_delete</span><span class="p">(</span><span class="n">format</span><span class="p">);</span>

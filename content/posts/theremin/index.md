@@ -34,4 +34,4 @@ First, I could not get finger-tracking to work on the site. Only the less precis
 
 I was able to fix these problems in my implementation. The Hand Landmarker is fast and works well for tracking subtle changes in finger position. I also achieved much smoother frequency transitions with the [Tone.js](https://tonejs.github.io/) library. 
 
-You can try my demo [here](https://issledova.tel/projects/theremin_demo/) and see the source code on [GitHub](https://github.com/polinamials/virtual_theremin).
+You can try my demo [here](https://issledova.tel/posts/theremin_demo/) and see the source code on [GitHub](https://github.com/polinamials/virtual_theremin).

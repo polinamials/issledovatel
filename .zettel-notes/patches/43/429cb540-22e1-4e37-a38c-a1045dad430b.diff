@@ -1,0 +1,7 @@
+--- old
++++ new
+@@ -40,1 +40,1 @@
+-I spent a long time looking for a way to decrease the number of frames in the buffer, hoping it would reduce the latency. Turns out, the buffer size is hardcoded in Android's codec2 library  source code, and there's no way to change it.
++I spent a long time looking for a way to decrease the number of frames in the buffer, hoping it would reduce the latency. Turns out, the buffer size is hardcoded in Android's Codec2 library, and there's no way to change it. Here's the source: 
+@@ -67,0 +67,1 @@
++*android/platform/frameworks/av/refs/heads/main/./media/codec2/sfplugin/C2NodeImpl.cpp*

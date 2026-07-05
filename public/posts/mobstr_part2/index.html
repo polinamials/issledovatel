@@ -182,145 +182,6 @@
 
 
 
-  
-  
-  <link
-    type="text/css"
-    rel="stylesheet"
-    href="/lib/katex/katex.min.7145427311abfe1e820c33f8dd1df93294bcf251fe80c8eb8328e9410d80c09ed01fbad3ea7d22ccd371d047adeccf655182c3447454a755816915d4747ad42c.css"
-    integrity="sha512-cUVCcxGr/h6CDDP43R35MpS88lH&#43;gMjrgyjpQQ2AwJ7QH7rT6n0izNNx0Eet7M9lUYLDRHRUp1WBaRXUdHrULA==">
-  
-  
-  
-  <script
-    defer
-    type="text/javascript"
-    src="/js/katex.bundle.fb416df2aa1d76bf7beea158d2c5b760dfb7f801a8b34dc834deac18e169f7f2017de695e0dda839665893495c05c2372ab7064c9c71b047a9d7c2f8edb96ca6.js"
-    integrity="sha512-&#43;0Ft8qoddr977qFY0sW3YN&#43;3&#43;AGos03INN6sGOFp9/IBfeaV4N2oOWZYk0lcBcI3KrcGTJxxsEep18L47blspg=="
-    id="katex-render"></script>
-  
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-
 
 
 
@@ -392,7 +253,7 @@
     "keywords": ["Mobstr"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "538"
+    "wordCount": "781"
   }]
   </script>
 
@@ -722,7 +583,7 @@
     
     <img
       id="background-image"
-      src="/img/glass_hu_5453c584f4b1c792.jpg"
+      src="/img/glass_hu_c47a75f5fe0c88ed.jpg"
       role="presentation"
       loading="eager"
       decoding="async"
@@ -747,7 +608,7 @@
       integrity="sha512-YFs7lCgY8KtacXrkRhNexGuO5aKtEq5W&#43;5DcKnbOMMOI&#43;f7IvMGNsVvUfj&#43;ooJ13n6EqqcGEz2FKMVvHLGwWPQ=="
       data-blur-id="background-blur"
       data-image-id="background-image"
-      data-image-url="/img/glass_hu_5453c584f4b1c792.jpg"></script>
+      data-image-url="/img/glass_hu_c47a75f5fe0c88ed.jpg"></script>
   
       
     
@@ -808,19 +669,6 @@
     
 
     
-    
-      <span class="ps-2"><span class="flex cursor-pointer">
-  
-  
-  
-  
-    <span
-      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-  
-    Draft
-  </span>
-</span>
-</span>
     
   </div>
 
@@ -903,6 +751,149 @@
       
       
       
+        <div class="order-first lg:ms-auto px-0 lg:order-last lg:ps-8 lg:max-w-2xs">
+          <div class="toc ps-5 print:hidden lg:sticky lg:top-[140px]">
+            <details
+  open
+  id="TOCView"
+  class="toc-right mt-0 overflow-y-auto overscroll-contain bf-scrollbar rounded-lg -ms-5 ps-5 pe-2 hidden lg:block">
+  <summary
+    class="block py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 -ms-5 ps-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    Table of Contents
+  </summary>
+  <div
+    class="min-w-[220px] py-2 border-dotted border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#delay-diversion">Delay Diversion</a></li>
+    <li><a href="#ui-updates">UI Updates</a></li>
+    <li><a href="#future-features">Future Features</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+<details class="toc-inside mt-0 overflow-hidden rounded-lg -ms-5 ps-5 lg:hidden">
+  <summary
+    class="py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 -ms-5 ps-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    Table of Contents
+  </summary>
+  <div
+    class="py-2 border-dotted border-neutral-300 border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#delay-diversion">Delay Diversion</a></li>
+    <li><a href="#ui-updates">UI Updates</a></li>
+    <li><a href="#future-features">Future Features</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+
+<script>
+  (function () {
+    'use strict'
+
+    const SCROLL_OFFSET_RATIO = 0.33
+    const TOC_SELECTOR = '#TableOfContents'
+    const ANCHOR_SELECTOR = '.anchor'
+    const TOC_LINK_SELECTOR = 'a[href^="#"]'
+    const NESTED_LIST_SELECTOR = 'li ul'
+    const ACTIVE_CLASS = 'active'
+    let isJumpingToAnchor = false
+
+    function getActiveAnchorId(anchors, offsetRatio) {
+      const threshold = window.scrollY + window.innerHeight * offsetRatio
+      const tocLinks = [...document.querySelectorAll('#TableOfContents a[href^="#"]')]
+      const tocIds = new Set(tocLinks.map(link => link.getAttribute('href').substring(1)))
+
+      if (isJumpingToAnchor) {
+        for (let i = 0; i < anchors.length; i++) {
+          const anchor = anchors[i]
+          if (!tocIds.has(anchor.id)) continue
+          const top = anchor.getBoundingClientRect().top + window.scrollY
+          if (Math.abs(window.scrollY - top) < 100) {
+            return anchor.id
+          }
+        }
+      }
+
+      for (let i = anchors.length - 1; i >= 0; i--) {
+        const top = anchors[i].getBoundingClientRect().top + window.scrollY
+        if (top <= threshold && tocIds.has(anchors[i].id)) {
+          return anchors[i].id
+        }
+      }
+      return anchors.find(anchor => tocIds.has(anchor.id))?.id || ''
+    }
+
+    function updateTOC({ toc, anchors, links, scrollOffset, collapseInactive }) {
+      const activeId = getActiveAnchorId(anchors, scrollOffset)
+      if (!activeId) return
+
+      links.forEach(link => {
+        const isActive = link.getAttribute('href') === `#${activeId}`
+        link.classList.toggle(ACTIVE_CLASS, isActive)
+
+        if (collapseInactive) {
+          const ul = link.closest('li')?.querySelector('ul')
+          if (ul) ul.style.display = isActive ? '' : 'none'
+        }
+      })
+
+      if (collapseInactive) {
+        const activeLink = toc.querySelector(`a[href="#${CSS.escape(activeId)}"]`)
+        let el = activeLink
+        while (el && el !== toc) {
+          if (el.tagName === 'UL') el.style.display = ''
+          if (el.tagName === 'LI') el.querySelector('ul')?.style.setProperty('display', '')
+          el = el.parentElement
+        }
+      }
+    }
+
+    function initTOC() {
+      const toc = document.querySelector(TOC_SELECTOR)
+      if (!toc) return
+
+      const collapseInactive = false
+      const anchors = [...document.querySelectorAll(ANCHOR_SELECTOR)]
+      const links = [...toc.querySelectorAll(TOC_LINK_SELECTOR)]
+
+      if (collapseInactive) {
+        toc.querySelectorAll(NESTED_LIST_SELECTOR).forEach(ul => ul.style.display = 'none')
+      }
+
+      links.forEach(link => {
+        link.addEventListener('click', () => {
+          isJumpingToAnchor = true
+        })
+      })
+
+      const config = {
+        toc,
+        anchors,
+        links,
+        scrollOffset: SCROLL_OFFSET_RATIO,
+        collapseInactive
+      }
+
+      window.addEventListener('scroll', () => updateTOC(config), { passive: true })
+      window.addEventListener('hashchange', () => updateTOC(config), { passive: true })
+
+      updateTOC(config)
+    }
+
+    document.readyState === 'loading'
+      ? document.addEventListener('DOMContentLoaded', initTOC)
+      : initTOC()
+  })()
+</script>
+
+
+          </div>
+        </div>
+      
 
 
       <div class="min-w-0 min-h-0 max-w-fit">
@@ -942,38 +933,57 @@
 
 
         <div class="article-content max-w-prose mb-20">
-          
-
-<p>It&rsquo;s a been a while since I first introduced Mobstr in <a href="https://issledova.tel/posts/mobstr_part1/"  target="_blank" rel="noreferrer">Part 1</a> of the Mobstr Logbook. I was distracted by the heat wave and the World Cup, and wasted a whole lot of time debugging a latency issue which ended up being unrelated to the app.</p>
-<p>As I mentioned in Part 1, I was receiving my stream with this FFmpeg command and was observing around \(500\) ms of latency.</p>
+          <p>It&rsquo;s been a while since I first introduced Mobstr in <a href="https://issledova.tel/posts/mobstr_part1/"  target="_blank" rel="noreferrer">Part 1</a> of the Mobstr Logbook. I was distracted by the heat wave and the World Cup, and wasted a lot of time debugging latency which turned out to be unrelated to the app.</p>
+<p>As mentioned in Part 1, I observed around 500 ms of latency when receiving the stream with this FFmpeg command:</p>
 <div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ffplay -protocol_whitelist file,udp,rtp -fflags nobuffer -flags low_delay -framedrop -i ./stream.sdp</span></span></code></pre></div></div>
-<p>I thought the problem must be related to the H.264 encoder or the RTP packetizer, so I spent several days timing every part of the application to measure its end-to-end latency. It sent me down many fruitless rabbit holes, such as trying to change the size of the encoder&rsquo;s input buffer size.</p>
-<!-- ```cpp
+<p>I also saw dropped packets, especially when the network was busy. After dropping a packet, the stream would accumulate more lag.</p>
+<p>I thought the delay must be caused by the H.264 encoder or the RTP packetizer, so I spent several days measuring the app&rsquo;s end-to-end latency. I ended up going down many dead-end paths, for example trying to change the size of the encoder&rsquo;s input buffer.</p>
 
-AMediaCodecBufferInfo info; 
-int outputIdx = AMediaCodec_dequeueOutputBuffer(codec, &info, 0);
-
-if (outputIdx >= 0) 
-{ 
-    int64_t outputPts = info.presentationTimeUs;
-    int64_t targetTime = get_current_time_microseconds();
-    int64_t hardwareLatencyMs = (targetTime - outputPts) / 1000;
-
-    __android_log_print(ANDROID_LOG_INFO, "MobstrPerf", "Hardware Encoder Latency: %lld ms", hardwareLatencyMs);
-
-}
-``` -->
-<p>When timing <code>AMediaCodec_dequeueOutputBuffer</code>, my logs showed a rather high latency, around \(100\) ms.</p>
+<h2 class="relative group">Delay Diversion
+    <div id="delay-diversion" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#delay-diversion" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>When timing <code>AMediaCodec_dequeueOutputBuffer</code>, my logs showed rather high latency, around 100 ms.</p>
 <div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">2026-06-06 16:13:59.396  6856-7049  MobstrPerf  com.example.mobstr  <span class="p">|</span>   Hardware Encoder Latency: <span class="m">106</span> ms
 </span></span><span class="line"><span class="cl">2026-06-06 16:13:59.432  6856-7049  MobstrPerf  com.example.mobstr  <span class="p">|</span>   Hardware Encoder Latency: <span class="m">108</span> ms
 </span></span><span class="line"><span class="cl">2026-06-06 16:13:59.464  6856-7049  MobstrPerf  com.example.mobstr  <span class="p">|</span>   Hardware Encoder Latency: <span class="m">107</span> ms</span></span></code></pre></div></div>
-<p>I then noticed these logs:</p>
+<p>I also noticed system logs which indicated the encoder&rsquo;s input buffer held 16 frames:</p>
 <div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">2026-06-06 16:13:56.152  6856-6974  C2NodeImpl              com.example.mobstr  D  getInputBufferParams: wxh 640x480, delay <span class="m">16</span>
 </span></span><span class="line"><span class="cl">2026-06-06 16:13:56.152  6856-6974  BufferQueueConsumer     com.example.mobstr  D  GraphicBufferSource setMaxAcquiredBufferCount: <span class="m">16</span>       </span></span></code></pre></div></div>
-<p>which indicated that the encoder&rsquo;s input buffer contained 16 frames.</p>
-<p>I decided to switch from FFMPEG to GStreamer and wouldn&rsquo;t you know it, the latency was gone! The problem was the receiver not my sender, after all. This command fixed it all:</p>
+<p>I spent a long time looking for a way to decrease the number of frames in the buffer, hoping it would reduce the latency. Turns out, the buffer size is hardcoded in Android&rsquo;s Codec2 library, and there&rsquo;s no way to change it. Here&rsquo;s the source:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">void</span> <span class="n">C2NodeImpl</span><span class="o">::</span><span class="n">getInputBufferParams</span><span class="p">(</span><span class="n">IAidlNode</span><span class="o">::</span><span class="n">InputBufferParams</span> <span class="o">*</span><span class="n">params</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">params</span><span class="o">-&gt;</span><span class="n">bufferCountActual</span> <span class="o">=</span> <span class="mi">16</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// WORKAROUND: having more slots improve performance while consuming
+</span></span></span><span class="line"><span class="cl">    <span class="c1">// more memory. This is a temporary workaround to reduce memory for
+</span></span></span><span class="line"><span class="cl">    <span class="c1">// larger-than-4K scenario.
+</span></span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">mWidth</span> <span class="o">*</span> <span class="n">mHeight</span> <span class="o">&gt;</span> <span class="mi">4096</span> <span class="o">*</span> <span class="mi">2340</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">Codec2Client</span><span class="o">::</span><span class="n">Component</span><span class="o">&gt;</span> <span class="n">comp</span> <span class="o">=</span> <span class="n">mComp</span><span class="p">.</span><span class="n">lock</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">        <span class="n">C2PortActualDelayTuning</span><span class="o">::</span><span class="n">input</span> <span class="n">inputDelay</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">C2ActualPipelineDelayTuning</span> <span class="nf">pipelineDelay</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">c2_status_t</span> <span class="n">c2err</span> <span class="o">=</span> <span class="n">C2_NOT_FOUND</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">comp</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">c2err</span> <span class="o">=</span> <span class="n">comp</span><span class="o">-&gt;</span><span class="n">query</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">                    <span class="p">{</span><span class="o">&amp;</span><span class="n">inputDelay</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">pipelineDelay</span><span class="p">},</span> <span class="p">{},</span> <span class="n">C2_DONT_BLOCK</span><span class="p">,</span> <span class="k">nullptr</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">c2err</span> <span class="o">==</span> <span class="n">C2_OK</span> <span class="o">||</span> <span class="n">c2err</span> <span class="o">==</span> <span class="n">C2_BAD_INDEX</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">params</span><span class="o">-&gt;</span><span class="n">bufferCountActual</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="n">params</span><span class="o">-&gt;</span><span class="n">bufferCountActual</span> <span class="o">+=</span> <span class="p">(</span><span class="n">inputDelay</span> <span class="o">?</span> <span class="n">inputDelay</span><span class="p">.</span><span class="nl">value</span> <span class="p">:</span> <span class="mi">0u</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="n">params</span><span class="o">-&gt;</span><span class="n">bufferCountActual</span> <span class="o">+=</span> <span class="p">(</span><span class="n">pipelineDelay</span> <span class="o">?</span> <span class="n">pipelineDelay</span><span class="p">.</span><span class="nl">value</span> <span class="p">:</span> <span class="mi">0u</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="n">params</span><span class="o">-&gt;</span><span class="n">frameWidth</span> <span class="o">=</span> <span class="n">mWidth</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">params</span><span class="o">-&gt;</span><span class="n">frameHeight</span> <span class="o">=</span> <span class="n">mHeight</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div></div>
+<p><em>android/platform/frameworks/av/refs/heads/main/./media/codec2/sfplugin/C2NodeImpl.cpp</em></p>
+<p>However, even with the encoder outputting an image 100 ms after it was acquired, the total processing time per frame did not add up to 500 ms. It finally crossed my mind that the receiver might be the problem. I switched from FFmpeg to GStreamer and to my surprise, the high latency and instability were gone! I used this command:</p>
 <div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">gst-launch-1.0 -v udpsrc <span class="nv">port</span><span class="o">=</span><span class="m">5004</span> <span class="nv">caps</span><span class="o">=</span><span class="s2">&#34;application/x-rtp, media=(string)video, clock-rate=(int)90000, encoding-name=(string)H264&#34;</span> ! rtph264depay ! h264parse ! avdec_h264 ! videoconvert ! autovideosink <span class="nv">sync</span><span class="o">=</span>false</span></span></code></pre></div></div>
-<p>I measured the latency using the classic clock screenshot method, and it was less than 200ms. Not bad at all for a 30fps stream over a wifi connection. It can probably be optimized, but after wasting so much time and enegery on investigating latency, I didn&rsquo;t want to deal with the RTP backend anymore. So I focused on the UI functionality.</p>
+<p>I believe the difference is in how FFmpeg and GStreamer handle playback timing. FFmpeg is more strict about timing synchronization, and forces the frames to buffer after a packet drops. GStreamer on the other hand, when configured with <code>sync=false</code>, simply decodes and renders frames as soon as they arrive, without checking presentation timestamps.</p>
+<p>Using the clock screenshot method, I measured the end-to-end delay to be around 150 ms. Not bad for a 30 fps stream on Wi-Fi. It can probably be optimized, but after expending so much energy on latency rabbit holes, I didn&rsquo;t want to deal with the backend anymore. Instead, I focused on improving UI functionality.</p>
 <p><figure><img
     class="my-0 rounded-md"
     loading="lazy"
@@ -982,13 +992,23 @@ if (outputIdx >= 0)
     alt="Latency measurement"
     width="1778"
     height="886"
-    src="/posts/mobstr_part2/latency_hu_e045a0a3adcee36e.png"
-    srcset="/posts/mobstr_part2/latency_hu_e045a0a3adcee36e.png 800w, /posts/mobstr_part2/latency_hu_bf2251c72ef5e0dc.png 1280w"
+    src="/posts/mobstr_part2/latency_hu_46652723294c2a7a.png"
+    srcset="/posts/mobstr_part2/latency_hu_46652723294c2a7a.png 800w, /posts/mobstr_part2/latency_hu_509ded661fd15aa4.png 1280w"
     sizes="(min-width: 768px) 50vw, 65vw"
     data-zoom-src="/posts/mobstr_part2/latency.png"></figure>
 </p>
-<p><em>End-to-end latency measurement done by filming a millisecond clock and screenshotting the streamed image next to the current clock value. The latency is approximately \(745-595 = 150\) ms which is quite fast for a stream over a wireless connection.</em></p>
-<p>I added a camera preview to the UI, stream settings, and camera parameters. I also plan to populate the statistics/diagnostics tab, but it&rsquo;s currently empty.</p>
+<p><em>Total delay measurement done by capturing a transmitted image of a precise clock side by side with the clock itself. The delay is approximately 745 – 595 = 150 ms.</em></p>
+
+<h2 class="relative group">UI Updates
+    <div id="ui-updates" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#ui-updates" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>I added camera preview, stream settings, and camera controls. I also plan to populate the statistics/diagnostics tab, but it&rsquo;s currently empty.</p>
 <p><figure><img
     class="my-0 rounded-md"
     loading="lazy"
@@ -1002,7 +1022,7 @@ if (outputIdx >= 0)
     sizes="(min-width: 768px) 50vw, 65vw"
     data-zoom-src="/posts/mobstr_part2/portrait_stream_settings.jpg"></figure>
 </p>
-<p>The stream settings now allow you to set the IP, port, MTU, and the stream resolution.</p>
+<p>The stream settings allow to set the receiver IP, port, MTU, and stream resolution.</p>
 <p><figure><img
     class="my-0 rounded-md"
     loading="lazy"
@@ -1011,13 +1031,26 @@ if (outputIdx >= 0)
     alt="Camera controls"
     width="2048"
     height="917"
-    src="/posts/mobstr_part2/landscape_camera_controls_hu_84efe1c080672059.jpg"
-    srcset="/posts/mobstr_part2/landscape_camera_controls_hu_84efe1c080672059.jpg 800w, /posts/mobstr_part2/landscape_camera_controls_hu_7c79094dcc136b44.jpg 1280w"
+    src="/posts/mobstr_part2/landscape_camera_controls_hu_155393c45ca2f32.jpg"
+    srcset="/posts/mobstr_part2/landscape_camera_controls_hu_155393c45ca2f32.jpg 800w, /posts/mobstr_part2/landscape_camera_controls_hu_a50b8d836353c98f.jpg 1280w"
     sizes="(min-width: 768px) 50vw, 65vw"
     data-zoom-src="/posts/mobstr_part2/landscape_camera_controls.jpg"></figure>
 </p>
-<p>The camera controls tab exposes some camera parameters, such as exposure mode, exposure time, ISO, etc. The list of avaliable Android camera parameters is <a href="https://developer.android.com/reference/android/hardware/camera2/CaptureRequest"  target="_blank" rel="noreferrer">extensive</a>, and their names and corresponding <a href="https://developer.android.com/reference/android/hardware/camera2/CameraCharacteristics"  target="_blank" rel="noreferrer">possible values</a> cannot be obtained automatically, so I manually selected a few paramerts that are enough to start. I&rsquo;m probably going to expose a set of parameters similar to the ones in the <a href="https://en.wikipedia.org/wiki/GenICam"  target="_blank" rel="noreferrer">GenICam</a> standard, because it is the standard for machine vision cameras, and Mobstr basically turns your phone into a diet machine vision camera.</p>
-<p>To recap, the latency turned out to be a receiver issue, not the sender issue, and now the UI is much more usable. Now that MObstr is minimally functional, I&rsquo;m going to test receiving the Mobstr stream with OpenCV or Roboflow&rsquo;s inference library, to close the loop.</p>
+<p>The camera controls tab contains camera parameters such as exposure, ISO, auto-focus, etc. The list of Android camera <a href="https://developer.android.com/reference/android/hardware/camera2/CaptureRequest"  target="_blank" rel="noreferrer">parameters</a> and their <a href="https://developer.android.com/reference/android/hardware/camera2/CameraCharacteristics"  target="_blank" rel="noreferrer">possible values</a> is extensive and can&rsquo;t be fetched in a generic way, so I manually selected a few to start. I plan to expose the same parameters as the <a href="https://en.wikipedia.org/wiki/GenICam"  target="_blank" rel="noreferrer">GenICam</a> standard, since Mobstr essentially turns your smartphone into a machine vision camera.</p>
+
+<h2 class="relative group">Future Features
+    <div id="future-features" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#future-features" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Now that Mobstr is minimally functional, I&rsquo;d like to close the loop by creating a simple CV processing pipeline that takes the stream as input. I will likely need to update the backend to start an RTSP server, such that the PC can subscribe to it. I also still need to implement RTCP.</p>
+<p>As mentioned earlier, I want the UI to have a diagnostics tab that displays the actual frame rate and bit-rate. Bit-rate should also be configurable from the stream settings.</p>
+<p>But&hellip; That&rsquo;s work for another time.</p>
+<p>See you in Part 3!</p>
 
           
           

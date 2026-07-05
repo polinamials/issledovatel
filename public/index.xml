@@ -7,7 +7,27 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2026 Polina Shopina</copyright>
-    <lastBuildDate>Sun, 31 May 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 04 Jul 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>About Me</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Sat, 04 Jul 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/about/</guid>
+      <description>&lt;p&gt;Hi, I&amp;rsquo;m Polina, and this is a plot of digital land I staked out for myself. Here, I write about my projects, hobbies, or whatever is on mind.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Mobstr Logbook Part 2: Latency Struggles and UI Improvements</title>
+      <link>http://localhost:1313/posts/mobstr_part2/</link>
+      <pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/mobstr_part2/</guid>
+      <description>Making the Android app actually usable.</description>
+      
+    </item>
     
     <item>
       <title>Mobstr Logbook Part 1: What is Mobstr? A Proof of Concept.</title>
@@ -46,16 +66,6 @@
       
       <guid>http://localhost:1313/posts/emergent_demo/</guid>
       <description>Unsupervised anomaly detection demo for inVISION Days.</description>
-      
-    </item>
-    
-    <item>
-      <title>About Me</title>
-      <link>http://localhost:1313/about/</link>
-      <pubDate>Sat, 13 Sep 2025 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/about/</guid>
-      <description>&lt;p&gt;Under construction&amp;hellip;&lt;/p&gt;</description>
       
     </item>
     

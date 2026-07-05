@@ -1,0 +1,5 @@
+--- old
++++ new
+@@ -11,1 +11,1 @@
+-It's been a while since I first introduced Mobstr in [Part 1](https://issledova.tel/posts/mobstr_part1/) of the Mobstr Logbook. I was distracted by the heat wave and the World Cup, and wasted a lot of time debugging high latency which turned out to be unrelated to the app. 
++It's been a while since I first introduced Mobstr in [Part 1](https://issledova.tel/posts/mobstr_part1/) of the Mobstr Logbook. I was distracted by the heat wave and the World Cup, and wasted a lot of time debugging latency which turned out to be unrelated to the app. 

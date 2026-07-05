@@ -1,0 +1,13 @@
+--- old
++++ new
+@@ -7,2 +7,1 @@
+-Hi, I'm Polina, and this is a plot of digital land I staked out for myself. Here, I write about my projects, hobbies, or whatever is on mind. I'm a software engineer with a BASc in Engineering Physics from the University of British Columbia (UBC) 
+-- Location: Vancouver, BC
++Hi, I'm Polina, and this is a plot of digital land I staked out for myself. Here, I write about my projects, hobbies, or whatever is on mind. 
+@@ -10,1 +9,1 @@
+-This website is called *issledovatel*, pronounced [ɪs⁽ʲ⁾ːˈlʲedəvətʲɪlʲ], which means *explorer* in Russian. I got this domain because I wanted to self-host a SearXNG search engine instance, and thought the play on Internet Explorer was really clever. Needless to say, I did not end up using the domain for SearXNG, but instead repurposed it for my personal site. 
++I studied Engineering Physics at UBC, and now I work as a software engineer in Vancouver, BC.
+@@ -12,0 +11,1 @@
++This website is called *issledovatel*, pronounced [ɪs⁽ʲ⁾ːˈlʲedəvətʲɪlʲ], which means *explorer* in Russian. I got this domain because I wanted to self-host a SearXNG search engine instance, and thought the play on *Internet Explorer* was very clever. Needless to say, I did not end up using the domain for its intended purpose, but instead attached it to my personal site. 
+@@ -16,0 +16,1 @@
++

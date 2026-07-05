@@ -1,0 +1,5 @@
+--- old
++++ new
+@@ -48,1 +48,1 @@
+-I believe what made the difference is that FFmpeg relies on accurate packet timestamps, whereas GStreamer is more forgiving. This is perhaps a sign to double check my RTP timestamping code. 
++I believe what made the difference is that FFmpeg relies on accurate packet timestamps, whereas GStreamer is more forgiving. <fact check this>

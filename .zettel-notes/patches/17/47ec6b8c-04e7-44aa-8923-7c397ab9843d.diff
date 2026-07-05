@@ -1,0 +1,11 @@
+--- old
++++ new
+@@ -2,1 +2,1 @@
+-date  = '2025-09-13'
++date = 2026-07-04
+@@ -7,4 +7,1 @@
+-Hi, I'm Polina, and this is a plot of digital land I staked out for myself. Here, I write about my projects, hobbies, of whatever is on mind. Some quick facts about me:
+-
+-- Job: software engineer
+-- Education: University of British Columbia (UBC), BASc in Engineering Physics
++Hi, I'm Polina, and this is a plot of digital land I staked out for myself. Here, I write about my projects, hobbies, or whatever is on mind. I'm a software engineer with a BASc in Engineering Physics from the University of British Columbia (UBC) 

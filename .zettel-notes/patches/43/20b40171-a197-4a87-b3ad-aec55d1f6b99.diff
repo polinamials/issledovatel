@@ -1,5 +1,0 @@
---- old
-+++ new
-@@ -75,1 +75,1 @@
--I believe what made the difference is that FFmpeg relies on accurate packet timestamps, whereas GStreamer is more forgiving. <fact check this>
-+I believe the difference is in how FFmpeg and GStreamer handle playback timing. FFmpeg is more strict about timing synchronization, and forces the frames to buffer after a packet drops. GStreamer on the other hand, when configured with `sync=false`, simply decodes and renders frames as soon as they arrive, without checking presentation timestamps. 

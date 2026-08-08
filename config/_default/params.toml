@@ -62,8 +62,8 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
   showViews = false
   showLikes = false
   showDateOnlyInArticle = false
-  showDateUpdated = false
-  showAuthor = false
+  showDateUpdated = true
+  showAuthor = true
   # showAuthorBottom = false
   showHero = true
   heroStyle = "background" # valid options: basic, big, background, thumbAndBackground
@@ -78,7 +78,7 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
   showHeadingAnchors = true
   showPagination = true
   invertPagination = false
-  showReadingTime = false
+  showReadingTime = true
   showTableOfContents = true
   # showRelatedContent = false
   # relatedContentLimit = 3
@@ -88,6 +88,7 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
   showWordCount = false
   sharingLinks = [ "bluesky", "mastodon", "email"]
   showZenMode = false
+  showComments = true
 
 [list]
   showHero = true

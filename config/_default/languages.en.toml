@@ -11,7 +11,7 @@ title = "issledovatel"
   dateFormat = "2 January 2006"
   # logo = "img/logo.png"
   # secondaryLogo = "img/secondary-logo.png"
-  # description = "My awesome website"
+  description = "Articles by Polina Shopina about C++, computer vision, edge AI, embedded systems, and software engineering."
   # copyright = "Copy, _right?_ :thinking_face:"
 
 [params.author]
@@ -20,7 +20,7 @@ title = "issledovatel"
    image = "img/author.jpeg"
 #   imageQuality = 96
    headline = "Software Engineer @ Emergent Vision Technologies"
-#   bio = "A little bit about you"
+   bio = "[About me](/about/)"
    links = [
      { email = "mailto:q9psyjse@anonaddy.me" },
 #     { link = "https://link-to-some-website.com/" },

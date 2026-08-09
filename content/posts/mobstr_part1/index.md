@@ -160,7 +160,7 @@ The initial sequence number and synchronization source identifier are randomly g
 
 The last thing I did was write a thin wrapper for the standard POSIX socket to send the RTP packets. I started streaming to my PC's port 5004 and monitored the packets in Wireshark. The packets were coming in fast and looked correct.
 
-![Wireshark Log](wireshark.png)
+![Wireshark Log](featured.png)
 *Wireshark log of the RTP stream.*
 
 It was time to actually receive and view the stream. I created an session description protocol file `stream.sdp` which describes my stream 

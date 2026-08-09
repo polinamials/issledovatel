@@ -88,7 +88,7 @@ I added camera preview, stream settings, and camera controls. I also plan to pop
 
 The stream settings allow to set the receiver IP, port, MTU, and stream resolution. 
 
-![Camera controls](landscape_camera_controls.jpg)
+![Camera controls](featured.jpg)
 
 The camera controls tab contains camera parameters such as exposure, ISO, auto-focus, etc. The list of Android camera [parameters](https://developer.android.com/reference/android/hardware/camera2/CaptureRequest) and their [possible values](https://developer.android.com/reference/android/hardware/camera2/CameraCharacteristics) is extensive and can't be fetched in a generic way, so I manually selected a few to start. I plan to expose the same parameters as the [GenICam](https://en.wikipedia.org/wiki/GenICam) standard, since Mobstr essentially turns your smartphone into a machine vision camera. 
 

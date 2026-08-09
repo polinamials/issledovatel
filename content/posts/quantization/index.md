@@ -79,7 +79,7 @@ $$
 
 Common floating-point formats used in machine learning (ML), include FP32, FP16, BF16 and FP8.
 
-![Floating Point Types](floating_point_types.jpg)
+![Floating Point Types](featured.jpg)
 
 *Figure 2: Common floating-point formats used in machine learning.*
 

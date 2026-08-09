@@ -7,10 +7,8 @@ summary: A visual guide to neural network quantization, from floating-point form
 description: Learn how neural network quantization works, including FP16, INT8, PTQ and QAT, with MobileNetV2 benchmarks and feature-map visualizations.
 images: ["featured.jpg"]
 tags:
-  - Machine Learning
-  - Neural Network Quantization
+  - ML
   - TensorRT
-  - ONNX Runtime
 showAuthor: true
 ---
 

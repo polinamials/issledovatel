@@ -9,7 +9,6 @@ images: ["featured.jpg"]
 tags:
   - ML
   - TensorRT
-showAuthor: true
 ---
 
 {{< katex >}}

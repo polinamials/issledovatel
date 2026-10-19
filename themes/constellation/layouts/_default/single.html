@@ -1,0 +1,40 @@
+{{ define "main" }}
+  {{ $hasTOC := and (eq .Section "posts") (strings.Contains .TableOfContents "<li>") }}
+  <div class="article-layout{{ if not $hasTOC }} article-layout-no-toc{{ end }}">
+    <article class="article">
+      <header class="article-header" id="single_header">
+        {{ with .CurrentSection }}{{ if ne .RelPermalink $.RelPermalink }}<a class="eyebrow" href="{{ .RelPermalink }}">{{ .Title }}</a>{{ end }}{{ end }}
+        <h1>{{ .Title }}</h1>
+        {{ with .Description }}<p class="article-description">{{ . }}</p>{{ end }}
+        {{ partial "article-meta.html" . }}
+      </header>
+      {{ if and (eq .Section "posts") .Params.series }}
+        {{ partial "series-nav.html" . }}
+      {{ end }}
+      <div class="article-content">
+        {{ .Content }}
+      </div>
+      {{ if eq .Section "posts" }}
+        <nav class="article-pagination" aria-label="More articles">
+          {{ with .PrevInSection }}<a href="{{ .RelPermalink }}"><small>Previous</small><span>{{ .Title }}</span></a>{{ end }}
+          {{ with .NextInSection }}<a class="next" href="{{ .RelPermalink }}"><small>Next</small><span>{{ .Title }}</span></a>{{ end }}
+        </nav>
+      {{ end }}
+      {{ if and (eq .Section "posts") (ne .Params.showComments false) }}
+        <section class="comments" aria-labelledby="comments-title">
+          <h2 id="comments-title">Discussion</h2>
+          {{ partial "comments.html" . }}
+        </section>
+      {{ end }}
+    </article>
+    {{ if $hasTOC }}
+      <aside class="toc" aria-label="Table of contents">
+        <div class="toc-inner">
+          <p>On this page</p>
+          {{ .TableOfContents }}
+        </div>
+      </aside>
+    {{ end }}
+  </div>
+{{ end }}
+

@@ -1,0 +1,18 @@
+{{ $posts := where site.RegularPages "Section" "posts" }}
+<aside class="archive" aria-labelledby="archive-title">
+  <div class="archive-inner">
+    <h2 id="archive-title">Archive</h2>
+    <ol>
+      {{ range first 5 ($posts.GroupByDate "January 2006") }}
+        {{ $first := index .Pages 0 }}
+        <li>
+          <a href="{{ "posts/" | relURL }}#archive-{{ $first.Date.Format "2006-01" }}">
+            <span>{{ .Key }}</span><span>({{ len .Pages }})</span>
+          </a>
+        </li>
+      {{ end }}
+    </ol>
+    <a class="archive-all" href="{{ "posts/" | relURL }}">Complete archive <span aria-hidden="true">↗</span></a>
+  </div>
+</aside>
+

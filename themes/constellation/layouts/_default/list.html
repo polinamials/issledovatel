@@ -1,0 +1,22 @@
+{{ define "main" }}
+  <div class="list-layout">
+    <section class="list-main">
+      <header class="list-header">
+        <p class="eyebrow">The archive</p>
+        <h1>{{ .Title }}</h1>
+        {{ with .Content }}<div class="list-description">{{ . }}</div>{{ end }}
+      </header>
+      {{ range .Pages.GroupByDate "January 2006" }}
+        {{ $first := index .Pages 0 }}
+        <section class="archive-group" id="archive-{{ $first.Date.Format "2006-01" }}">
+          <h2>{{ .Key }} <span>{{ len .Pages }}</span></h2>
+          {{ range $index, $page := .Pages }}
+            {{ partial "post-row.html" (dict "page" $page) }}
+          {{ end }}
+        </section>
+      {{ end }}
+    </section>
+    {{ partial "archive.html" . }}
+  </div>
+{{ end }}
+

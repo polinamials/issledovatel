@@ -1,0 +1,12 @@
+{{ define "main" }}
+  <section class="terms-page">
+    <p class="eyebrow">Browse the notebook</p>
+    <h1>{{ .Title }}</h1>
+    <ul class="term-cloud">
+      {{ range .Data.Terms.Alphabetical }}
+        <li><a href="{{ .Page.RelPermalink }}"><span>{{ .Page.Title }}</span><small>{{ .Count }}</small></a></li>
+      {{ end }}
+    </ul>
+  </section>
+{{ end }}
+

@@ -1,0 +1,50 @@
+{{ $currentPage := . }}
+{{ $seriesName := index .Params.series 0 }}
+{{ $seriesPage := site.GetPage (printf "/series/%s" ($seriesName | urlize)) }}
+{{ with $seriesPage }}
+  {{ $seriesPages := .Pages.ByParam "series_order" }}
+  {{ $currentIndex := 0 }}
+  {{ range $index, $page := $seriesPages }}
+    {{ if eq $page.RelPermalink $currentPage.RelPermalink }}{{ $currentIndex = $index }}{{ end }}
+  {{ end }}
+  {{ $previous := false }}
+  {{ $next := false }}
+  {{ if gt $currentIndex 0 }}{{ $previous = index $seriesPages (sub $currentIndex 1) }}{{ end }}
+  {{ if lt (add $currentIndex 1) (len $seriesPages) }}{{ $next = index $seriesPages (add $currentIndex 1) }}{{ end }}
+
+  <nav class="series-nav" aria-label="{{ $seriesName }} series navigation">
+    <div class="series-header">
+      <div>
+        <span class="series-kicker">Article series</span>
+        <a class="series-name" href="{{ .RelPermalink }}">{{ $seriesName }}</a>
+      </div>
+      <span class="series-count">Part {{ add $currentIndex 1 }} of {{ len $seriesPages }}</span>
+    </div>
+    <ol class="series-track" aria-label="Series progress">
+      {{ range $index, $page := $seriesPages }}
+        {{ $part := $page.Params.series_order | default (add $index 1) }}
+        <li>
+          <a href="{{ $page.RelPermalink }}" aria-label="Part {{ $part }}: {{ $page.Title }}"{{ if eq $page.RelPermalink $currentPage.RelPermalink }} aria-current="page"{{ end }}>
+            {{ printf "%02d" (int $part) }}
+          </a>
+        </li>
+      {{ end }}
+    </ol>
+    {{ if or $previous $next }}
+      <div class="series-adjacent">
+        {{ with $previous }}
+          <a href="{{ .RelPermalink }}">
+            <small>Previous in series</small>
+            <span>{{ .Title }}</span>
+          </a>
+        {{ else }}<span></span>{{ end }}
+        {{ with $next }}
+          <a class="next" href="{{ .RelPermalink }}">
+            <small>Next in series</small>
+            <span>{{ .Title }}</span>
+          </a>
+        {{ end }}
+      </div>
+    {{ end }}
+  </nav>
+{{ end }}

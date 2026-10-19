@@ -1,0 +1,9 @@
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-extension">{{ partial "extend-footer.html" . }}</div>
+    <p class="copyright">© {{ now.Year }} {{ site.Params.author.name | default site.Title }}</p>
+  </div>
+</footer>
+{{ $script := resources.Get "js/site.js" | minify | fingerprint }}
+<script defer src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}"></script>
+

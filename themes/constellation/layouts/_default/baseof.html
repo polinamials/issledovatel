@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="{{ site.Language.Lang | default "en" }}" data-theme="dark" data-palette="{{ site.Params.constellation.palette | default "plum" }}">
+  <head>
+    {{ partial "head.html" . }}
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    {{ partial "header.html" . }}
+    <main id="main-content">
+      {{ block "main" . }}{{ end }}
+    </main>
+    {{ partial "footer.html" . }}
+    {{ partial "search.html" . }}
+  </body>
+</html>
+

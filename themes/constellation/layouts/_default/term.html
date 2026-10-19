@@ -1,0 +1,15 @@
+{{ define "main" }}
+  <div class="list-layout">
+    <section class="list-main">
+      <header class="list-header">
+        <p class="eyebrow">Topic</p>
+        <h1>{{ .Title }}</h1>
+      </header>
+      <div class="post-list">
+        {{ range .Pages }}{{ partial "post-row.html" (dict "page" .) }}{{ end }}
+      </div>
+    </section>
+    {{ partial "archive.html" . }}
+  </div>
+{{ end }}
+

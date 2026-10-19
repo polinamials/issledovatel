@@ -1,0 +1,21 @@
+<aside class="profile" aria-label="About the author">
+  <div class="profile-inner">
+    {{ with site.Params.author.image }}
+      {{ with resources.Get . }}
+        {{ $portrait := .Fill "360x360 Center webp q88" }}
+        <img class="profile-image" src="{{ $portrait.RelPermalink }}" width="180" height="180" alt="{{ site.Params.author.name }}">
+      {{ end }}
+    {{ end }}
+    <h2>{{ site.Params.author.name }}</h2>
+    <p>{{ site.Params.constellation.sidebarBio | default site.Params.author.headline }}</p>
+    <div class="profile-links" aria-label="Social links">
+      {{ range site.Params.author.links }}
+        {{ range $name, $url := . }}
+          <a href="{{ $url | safeURL }}"{{ if not (eq $name "email") }} rel="me noopener"{{ end }}>{{ $name | humanize }}</a>
+        {{ end }}
+      {{ end }}
+    </div>
+    <a class="profile-about" href="{{ "about/" | relURL }}">About <span aria-hidden="true">→</span></a>
+  </div>
+</aside>
+

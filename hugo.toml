@@ -1,4 +1,0 @@
-baseURL = 'https://issledova.tel/'
-locale = 'en-us'
-title = 'My New Hugo Site'
-theme = "blowfish"

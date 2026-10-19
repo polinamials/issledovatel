@@ -1,0 +1,44 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark light">
+<title>{{ if not .IsHome }}{{ .Title }} · {{ end }}{{ site.Title }}</title>
+{{ with .Description | default site.Language.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
+<link rel="canonical" href="{{ .Permalink }}">
+{{ with .OutputFormats.Get "rss" }}<link rel="alternate" type="application/rss+xml" title="{{ site.Title }} RSS" href="{{ .RelPermalink }}">{{ end }}
+{{ partial "favicons.html" .Site }}
+
+<script>
+  (function () {
+    try {
+      var saved = localStorage.getItem("constellation-theme");
+      document.documentElement.dataset.theme = saved === "light" ? "light" : "dark";
+    } catch (_) {
+      document.documentElement.dataset.theme = "dark";
+    }
+  }());
+</script>
+
+{{ $sansRegular := resources.Get "fonts/ibm-plex-sans-latin-variable.woff2" | fingerprint }}
+{{ $sansItalic := resources.Get "fonts/ibm-plex-sans-latin-italic-variable.woff2" | fingerprint }}
+{{ $serifRegular := resources.Get "fonts/ibm-plex-serif-latin-400.woff2" | fingerprint }}
+{{ $serifMedium := resources.Get "fonts/ibm-plex-serif-latin-500.woff2" | fingerprint }}
+{{ $serifSemibold := resources.Get "fonts/ibm-plex-serif-latin-600.woff2" | fingerprint }}
+{{ $serifItalic := resources.Get "fonts/ibm-plex-serif-latin-italic-400.woff2" | fingerprint }}
+<style>
+  @font-face{font-family:"IBM Plex Sans";font-style:normal;font-weight:400 700;font-display:swap;src:url("{{ $sansRegular.RelPermalink }}") format("woff2")}
+  @font-face{font-family:"IBM Plex Sans";font-style:italic;font-weight:400 700;font-display:swap;src:url("{{ $sansItalic.RelPermalink }}") format("woff2")}
+  @font-face{font-family:"IBM Plex Serif";font-style:normal;font-weight:400;font-display:swap;src:url("{{ $serifRegular.RelPermalink }}") format("woff2")}
+  @font-face{font-family:"IBM Plex Serif";font-style:normal;font-weight:500;font-display:swap;src:url("{{ $serifMedium.RelPermalink }}") format("woff2")}
+  @font-face{font-family:"IBM Plex Serif";font-style:normal;font-weight:600;font-display:swap;src:url("{{ $serifSemibold.RelPermalink }}") format("woff2")}
+  @font-face{font-family:"IBM Plex Serif";font-style:italic;font-weight:400;font-display:swap;src:url("{{ $serifItalic.RelPermalink }}") format("woff2")}
+</style>
+{{ $style := resources.Get "css/main.css" | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">
+{{ partial "vendor.html" . }}
+{{ partial "extend-head.html" . }}
+
+<meta property="og:title" content="{{ .Title }}">
+<meta property="og:description" content="{{ .Description | default site.Language.Params.description }}">
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+<meta property="og:url" content="{{ .Permalink }}">
+

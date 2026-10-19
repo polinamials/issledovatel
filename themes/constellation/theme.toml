@@ -1,0 +1,10 @@
+name = "Constellation"
+license = "MIT"
+licenselink = "https://opensource.org/license/mit"
+description = "A lightweight, typography-first Hugo theme for personal technical blogs."
+homepage = "https://issledova.tel/"
+min_version = "0.146.0"
+
+[author]
+  name = "Polina Shopina"
+

@@ -1,0 +1,12 @@
+{{- $srcName := .Get "src" -}}
+{{- if not $srcName }}{{ errorf "video shortcode: src is required: %s" .Position }}{{ end -}}
+{{- $src := $srcName -}}
+{{- with .Page.Resources.GetMatch $srcName }}{{ $src = .RelPermalink }}{{ end -}}
+<figure class="video-figure">
+  <video controls playsinline preload="metadata"{{ if .Get "loop" }} loop{{ end }}{{ if .Get "muted" }} muted{{ end }}{{ with .Get "poster" }} poster="{{ . }}"{{ end }}>
+    <source src="{{ $src }}">
+    <p>Your browser cannot play this video. <a href="{{ $src }}">Download it instead</a>.</p>
+  </video>
+  {{ with .Get "caption" }}<figcaption>{{ . | markdownify }}</figcaption>{{ end }}
+</figure>
+

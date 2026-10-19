@@ -1,0 +1,20 @@
+<header class="site-header">
+  <div class="header-inner">
+    <a class="site-name" href="{{ site.Home.RelPermalink }}">{{ site.Title }}</a>
+    <div class="header-right">
+      <nav class="site-nav" aria-label="Main navigation">
+        {{ range site.Menus.main }}
+          <a href="{{ .URL }}"{{ if $.IsMenuCurrent "main" . }} aria-current="page"{{ end }}>{{ .Name }}</a>
+        {{ end }}
+      </nav>
+      <button class="icon-button search-open" type="button" aria-label="Search" aria-haspopup="dialog">
+        <img src="{{ "icons/search.svg" | relURL }}" alt="" width="19" height="19">
+      </button>
+      <button class="icon-button theme-toggle" type="button" aria-label="Switch to light theme" aria-pressed="false">
+        <img class="theme-icon theme-icon-sun" src="{{ "icons/sun.svg" | relURL }}" alt="" width="20" height="20">
+        <img class="theme-icon theme-icon-moon" src="{{ "icons/moon.svg" | relURL }}" alt="" width="18" height="18">
+      </button>
+    </div>
+  </div>
+</header>
+

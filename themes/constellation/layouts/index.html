@@ -1,0 +1,20 @@
+{{ define "main" }}
+  {{ $posts := where site.RegularPages "Section" "posts" }}
+  {{ $postLimit := site.Params.constellation.homePostLimit | default 8 }}
+  <div class="home-grid">
+    {{ partial "profile.html" . }}
+    <section class="home-feed" aria-labelledby="latest-title">
+      <p class="home-kicker">{{ site.Params.constellation.introKicker | default "Latest writing" }}</p>
+      <h1 class="home-intro" id="latest-title">
+        <span>{{ site.Params.constellation.introPrefix | default "Field notes" }}</span><em aria-hidden="true">{{ site.Params.constellation.introAccent | default "." }}</em>
+      </h1>
+      <div class="post-list">
+        {{ range $page := first $postLimit $posts }}
+          {{ partial "post-row.html" (dict "page" $page) }}
+        {{ end }}
+      </div>
+    </section>
+    {{ partial "archive.html" . }}
+  </div>
+{{ end }}
+

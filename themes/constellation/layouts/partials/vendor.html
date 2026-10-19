@@ -1,0 +1,10 @@
+{{ if .HasShortcode "katex" }}
+  {{ $katexCSS := resources.Get "lib/katex/katex.min.css" | fingerprint }}
+  <link rel="stylesheet" href="{{ $katexCSS.RelPermalink }}" integrity="{{ $katexCSS.Data.Integrity }}">
+  {{ $katex := resources.Get "lib/katex/katex.min.js" }}
+  {{ $render := resources.Get "lib/katex/auto-render.min.js" }}
+  {{ $bundle := slice $katex $render | resources.Concat "js/katex.bundle.js" | minify | fingerprint }}
+  <script defer src="{{ $bundle.RelPermalink }}" integrity="{{ $bundle.Data.Integrity }}" id="katex-render"></script>
+  {{ range resources.Match "lib/katex/fonts/*" }}<!-- {{ .RelPermalink }} -->{{ end }}
+{{ end }}
+

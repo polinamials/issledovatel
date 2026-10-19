@@ -1,0 +1,75 @@
+{{ define "main" }}
+  <section class="projects-page">
+    <header class="projects-header">
+      <p class="eyebrow">Portfolio</p>
+      <h1>{{ .Title }}</h1>
+      {{ with .Params.intro }}<p>{{ . }}</p>{{ end }}
+    </header>
+
+    <div class="project-ledger">
+      <div class="project-ledger-head" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span>Year</span>
+        <span>Stack</span>
+        <span>Blog post</span>
+        <span>View on GitHub</span>
+      </div>
+
+      {{ range $index, $project := .Params.projects }}
+        {{ $article := $.Site.GetPage $project.page }}
+        {{ if $article }}
+          {{ $featured := $article.Resources.GetMatch "featured.*" }}
+          {{ $thumbnail := $featured }}
+          {{ if and $featured (ne $featured.MediaType.SubType "gif") }}
+            {{ $thumbnail = $featured.Fill "468x312 webp q82 Center" }}
+          {{ end }}
+          <article class="project-row">
+            <span class="project-number" aria-hidden="true">{{ printf "%02d" (add $index 1) }}</span>
+
+            <a class="project-image" href="{{ $article.RelPermalink }}" tabindex="-1" aria-hidden="true">
+              {{ with $thumbnail }}
+                <img src="{{ .RelPermalink }}" alt="" width="{{ .Width }}" height="{{ .Height }}"{{ if gt $index 0 }} loading="lazy"{{ end }} decoding="async">
+              {{ end }}
+            </a>
+
+            <div class="project-summary">
+              <h2><a href="{{ $article.RelPermalink }}">{{ $project.title | default $article.Title }}</a></h2>
+              <p>{{ $project.summary | default $article.Params.summary | plainify }}</p>
+            </div>
+
+            <div class="project-cell project-year" data-label="Year">
+              <span>{{ $article.Date.Format "2006" }}</span>
+            </div>
+
+            <div class="project-cell project-stack" data-label="Stack">
+              <ul>
+                {{ range $project.stack }}<li>{{ . }}</li>{{ end }}
+              </ul>
+            </div>
+
+            <div class="project-cell project-link project-article" data-label="Blog post">
+              <a href="{{ $article.RelPermalink }}">Read blog post</a>
+            </div>
+
+            <div class="project-cell project-link project-github" data-label="View on GitHub">
+              <div class="project-actions">
+                {{ with $project.github }}
+                  <a href="{{ . }}" rel="noopener noreferrer">View source code</a>
+                {{ end }}
+                {{ if and $project.github $project.demo }}<span class="project-link-separator" aria-hidden="true">|</span>{{ end }}
+                {{ with $project.demo }}
+                  <a href="{{ . }}">Try demo</a>
+                {{ end }}
+                {{ if and (not $project.github) (not $project.demo) }}
+                  <span class="project-empty" aria-label="No public repository">—</span>
+                {{ end }}
+              </div>
+            </div>
+          </article>
+        {{ end }}
+      {{ end }}
+    </div>
+  </section>
+{{ end }}

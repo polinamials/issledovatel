@@ -1,0 +1,18 @@
+{{ $page := .page }}
+<article class="post-row">
+  <time class="post-date" datetime="{{ $page.Date.Format "2006-01-02" }}">
+    <span>{{ $page.Date.Format "02" }}</span>
+    <span>{{ upper ($page.Date.Format "Jan") }}</span>
+    <span>{{ $page.Date.Format "2006" }}</span>
+  </time>
+  <div class="post-body">
+    <h2><a href="{{ $page.RelPermalink }}">{{ $page.Title }}</a></h2>
+    {{ with $page.Params.summary | default $page.Summary }}<p class="post-summary">{{ . | plainify }}</p>{{ end }}
+    {{ with $page.Params.tags }}
+      <ul class="post-tags" aria-label="Topics">
+        {{ range . }}<li><a href="{{ printf "tags/%s/" (. | urlize) | relURL }}">{{ . }}</a></li>{{ end }}
+      </ul>
+    {{ end }}
+  </div>
+</article>
+

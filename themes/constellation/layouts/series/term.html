@@ -1,0 +1,22 @@
+{{ define "main" }}
+  {{ $pages := .Pages.ByParam "series_order" }}
+  <section class="series-page">
+    <header class="list-header">
+      <p class="eyebrow">Article series</p>
+      <h1>{{ .Title }}</h1>
+      <p class="list-description">A {{ len $pages }}-part series, in reading order.</p>
+    </header>
+    <ol class="series-index">
+      {{ range $index, $page := $pages }}
+        {{ $part := $page.Params.series_order | default (add $index 1) }}
+        <li>
+          <span class="series-index-number">Part {{ $part }}</span>
+          <div>
+            <h2><a href="{{ $page.RelPermalink }}">{{ $page.Title }}</a></h2>
+            {{ with $page.Params.summary | default $page.Summary }}<p>{{ . | plainify }}</p>{{ end }}
+          </div>
+        </li>
+      {{ end }}
+    </ol>
+  </section>
+{{ end }}
